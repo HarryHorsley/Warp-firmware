@@ -416,6 +416,19 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/boards/Warp/gpio_pins.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/boards/Warp/gpio_pins.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/boards/Warp/gpio_pins.c.obj
+ .text          0x0000000000000000        0x0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+ .text.writeCommand
+                0x0000000000000000       0x4c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+ .text.devSSD1331init
+                0x0000000000000000      0x168 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+ .bss.inBuffer  0x0000000000000000       0x20 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+ .bss.payloadBytes
+                0x0000000000000000       0x20 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+ .comment       0x0000000000000000       0x5a CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+ .ARM.attributes
+                0x0000000000000000       0x2c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
  .text          0x0000000000000000        0x0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
  .data          0x0000000000000000        0x0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
  .bss           0x0000000000000000        0x0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
@@ -1051,6 +1064,7 @@ LOAD CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platfor
 LOAD CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/startup/MKL03Z4/system_MKL03Z4.c.obj
 LOAD CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/startup/startup.c.obj
 LOAD CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/boards/Warp/gpio_pins.c.obj
+LOAD CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
 START GROUP
 LOAD ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a
 LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a

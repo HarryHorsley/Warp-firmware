@@ -161,7 +161,7 @@ devSSD1331init(void)
 	 *	of green.
 	 */
 
-	...
+	//...
 
 
 //	SEGGER_RTT_WriteString(0, "\r\n\tDone with draw rectangle...\n");
