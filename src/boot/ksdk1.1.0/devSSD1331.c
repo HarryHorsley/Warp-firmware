@@ -141,7 +141,7 @@ devSSD1331init(void)
 	 */
 	writeCommand(kSSD1331CommandFILL);
 	writeCommand(0x01);
-//	SEGGER_RTT_WriteString(0, "\r\n\tDone with enabling fill...\n");
+	SEGGER_RTT_WriteString(0, "\r\n\tDone with enabling fill...\n");
 
 	/*
 	 *	Clear Screen
