@@ -126,7 +126,7 @@ devSSD1331init(void)
 	writeCommand(kSSD1331CommandVCOMH);		// 0xBE
 	writeCommand(0x3E);
 	writeCommand(kSSD1331CommandMASTERCURRENT);	// 0x87
-	writeCommand(0x0F);
+	writeCommand(0x0E);
 	writeCommand(kSSD1331CommandCONTRASTA);		// 0x81
 	writeCommand(0x00);
 	writeCommand(kSSD1331CommandCONTRASTB);		// 0x82
@@ -151,7 +151,7 @@ devSSD1331init(void)
 	writeCommand(0x00);
 	writeCommand(0x5F);
 	writeCommand(0x3F);
-//	SEGGER_RTT_WriteString(0, "\r\n\tDone with screen clear...\n");
+	SEGGER_RTT_WriteString(0, "\r\n\tDone with screen clear...\n");
 
 
 
@@ -177,7 +177,7 @@ devSSD1331init(void)
 	writeCommand(0x3F);	// Set Fill Colour B to max
 	writeCommand(0x00);	// Set Fill Colour A to zero
 
-//	SEGGER_RTT_WriteString(0, "\r\n\tDone with draw rectangle...\n");
+	SEGGER_RTT_WriteString(0, "\r\n\tDone with draw rectangle...\n");
 
 
 
