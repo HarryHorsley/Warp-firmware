@@ -1105,6 +1105,8 @@ warp.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c
 stdint.h
 -
+stdio.h
+-
 fsl_spi_master_driver.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/fsl_spi_master_driver.h
 fsl_port_hal.h

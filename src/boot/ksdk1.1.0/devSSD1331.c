@@ -1,5 +1,5 @@
 #include <stdint.h>
-
+#include <stdio.h>
 #include "fsl_spi_master_driver.h"
 #include "fsl_port_hal.h"
 
@@ -173,7 +173,7 @@ devSSD1331init(void)
 
 	writeCommand(kSSD1331CommandMASTERCURRENT);		// Set scaling factor to max (16)
 	writeCommand(0x0F);
-	printf("Test point 1")
+	printf("Test point 1");
 	writeCommand(kSSD1331CommandDISPLAYON);
 	// Now to set the appropriate bits by drawing a rectangle and filling with colour
 
