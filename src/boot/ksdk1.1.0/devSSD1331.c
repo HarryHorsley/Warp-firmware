@@ -174,6 +174,7 @@ devSSD1331init(void)
 	writeCommand(kSSD1331CommandMASTERCURRENT);		// Set scaling factor to max (16)
 	writeCommand(0x0F);
 
+	writeCommand(kSSD1331CommandDISPLAYON);
 	// Now to set the appropriate bits by drawing a rectangle and filling with colour
 
 	writeCommand(kSSD1331CommandDRAWRECT);
@@ -187,8 +188,6 @@ devSSD1331init(void)
 	writeCommand(0x00);	// Set Fill Colour C to zero
 	writeCommand(0x3F);	// Set Fill Colour B to max
 	writeCommand(0x00);	// Set Fill Colour A to zero
-
-	writeCommand(kSSD1331CommandDISPLAYON);
 
 //	SEGGER_RTT_WriteString(0, "\r\n\tDone with draw rectangle...\n");
 
