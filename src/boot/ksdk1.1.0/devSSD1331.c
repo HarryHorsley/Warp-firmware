@@ -124,16 +124,16 @@ devSSD1331init(void)
 	writeCommand(kSSD1331CommandPRECHARGELEVEL);	// 0xBB
 	writeCommand(0x3A);
 	writeCommand(kSSD1331CommandVCOMH);		// 0xBE
-	writeCommand(0x3E);/*
+	writeCommand(0x3E);
 	writeCommand(kSSD1331CommandMASTERCURRENT);	// 0x87
-	writeCommand(0x06);
+	writeCommand(0x0F);
 	writeCommand(kSSD1331CommandCONTRASTA);		// 0x81
-	writeCommand(0x91);
+	writeCommand(0x00);
 	writeCommand(kSSD1331CommandCONTRASTB);		// 0x82
-	writeCommand(0x50);
+	writeCommand(0xFF);
 	writeCommand(kSSD1331CommandCONTRASTC);		// 0x83
-	writeCommand(0x7D);
-	writeCommand(kSSD1331CommandDISPLAYON);*/		// Turn on oled panel
+	writeCommand(0x00);
+	writeCommand(kSSD1331CommandDISPLAYON);		// Turn on oled panel
 //	SEGGER_RTT_WriteString(0, "\r\n\tDone with initialization sequence...\n");
 
 	/*
@@ -162,19 +162,7 @@ devSSD1331init(void)
 	 */
 
 	// The initilisation sequence above sets: display to normal mode, RGB 65k format and other settings such as oscillator frequency.
-	// Now we need to set the display to green with maximum contrast and scale factor. Then we need to set the appropriate bits.
-
-        writeCommand(kSSD1331CommandCONTRASTA);         // Set Red to 0 contrast
-        writeCommand(0x00);
-        writeCommand(kSSD1331CommandCONTRASTB);         // Set Green to full (255) contrast
-        writeCommand(0xFF);
-        writeCommand(kSSD1331CommandCONTRASTC);         // Set Blue to 0 contrast
-	writeCommand(0x00);
-
-	writeCommand(kSSD1331CommandMASTERCURRENT);		// Set scaling factor to max (16)
-	writeCommand(0x0F);
-	printf("Test point 1");
-	writeCommand(kSSD1331CommandDISPLAYON);
+	// Now we need to set the display to green with maximum contrast and scale factor. This was achieved by modifying the previous commands.
 	// Now to set the appropriate bits by drawing a rectangle and filling with colour
 
 	writeCommand(kSSD1331CommandDRAWRECT);

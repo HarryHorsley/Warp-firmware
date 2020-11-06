@@ -54,7 +54,7 @@
 #include "gpio_pins.h"
 #include "SEGGER_RTT.h"
 #include "warp.h"
-#include "devSSD1331.h"
+//#include "devSSD1331.h"
 
 #define WARP_FRDMKL03
 
@@ -63,6 +63,7 @@
 *	Comment out the header file to disable devices
 */
 #ifndef WARP_FRDMKL03
+#	include "devSSD1331.h"
 #	include "devBMX055.h"
 #	include "devMMA8451Q.h"
 #	include "devHDC1000.h"
@@ -1354,7 +1355,7 @@ main(void)
 	 */
 #endif
 
-devSSD1331init();
+	devSSD1331init();
 
 	while (1)
 	{

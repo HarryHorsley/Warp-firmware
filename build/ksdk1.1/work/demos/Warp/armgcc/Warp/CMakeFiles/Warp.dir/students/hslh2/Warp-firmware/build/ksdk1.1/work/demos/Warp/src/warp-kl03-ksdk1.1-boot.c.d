@@ -41,7 +41,6 @@ CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/s
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.h \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_Conf.h \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp.h \
- /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.h \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devMMA8451Q.h
 
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/utilities/inc/fsl_misc_utilities.h:
@@ -125,7 +124,5 @@ CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/s
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_Conf.h:
 
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp.h:
-
-/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.h:
 
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devMMA8451Q.h:
