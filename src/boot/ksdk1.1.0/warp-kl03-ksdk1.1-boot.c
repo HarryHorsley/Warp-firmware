@@ -86,6 +86,7 @@
 //#include "devISL23415.h"
 #else
 #    include "devMMA8451Q.h"
+#	include "devINA219.h"
 #endif
 
 
@@ -1256,9 +1257,9 @@ main(void)
 #ifdef WARP_BUILD_ENABLE_DEVMMA8451Q
     initMMA8451Q(    0x1D    /* i2cAddress */,    &deviceMMA8451QState    );
 #endif
-    
+
 #ifdef WARP_BUILD_ENABLE_DEVINA219
-    initINA219( 0x40 /* i2cAddress */, &deviceINA219State)
+    initINA219( 0x40 /* i2cAddress */, &deviceINA219State);
 #endif
 
 #ifdef WARP_BUILD_ENABLE_DEVLPS25H

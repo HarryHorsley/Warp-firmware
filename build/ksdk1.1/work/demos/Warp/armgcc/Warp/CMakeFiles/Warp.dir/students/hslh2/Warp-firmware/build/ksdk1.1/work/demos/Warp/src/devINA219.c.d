@@ -1,5 +1,5 @@
-CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj: \
- /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c \
+CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj: \
+ /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/utilities/inc/fsl_misc_utilities.h \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/CMSIS/Include/device/fsl_device_registers.h \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/CMSIS/Include/device/MKL03Z4/MKL03Z4.h \
@@ -35,14 +35,10 @@ CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/s
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/drivers/inc/fsl_gpio_driver.h \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/hal/inc/fsl_port_hal.h \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/hal/inc/fsl_gpio_hal.h \
- /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/drivers/inc/fsl_lpuart_driver.h \
- /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/hal/inc/fsl_lpuart_hal.h \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../boards/Warp/gpio_pins.h \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.h \
  /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_Conf.h \
- /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp.h \
- /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devMMA8451Q.h \
- /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.h
+ /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp.h
 
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/utilities/inc/fsl_misc_utilities.h:
 
@@ -114,10 +110,6 @@ CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/s
 
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/hal/inc/fsl_gpio_hal.h:
 
-/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/drivers/inc/fsl_lpuart_driver.h:
-
-/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../platform/hal/inc/fsl_lpuart_hal.h:
-
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/armgcc/Warp/../../../../boards/Warp/gpio_pins.h:
 
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.h:
@@ -125,7 +117,3 @@ CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/s
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_Conf.h:
 
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp.h:
-
-/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devMMA8451Q.h:
-
-/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.h:

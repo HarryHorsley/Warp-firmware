@@ -980,6 +980,36 @@ warp.h
 
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devHDC1000.h
 
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c
+stdlib.h
+-
+fsl_misc_utilities.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/fsl_misc_utilities.h
+fsl_device_registers.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/fsl_device_registers.h
+fsl_i2c_master_driver.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/fsl_i2c_master_driver.h
+fsl_spi_master_driver.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/fsl_spi_master_driver.h
+fsl_rtc_driver.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/fsl_rtc_driver.h
+fsl_clock_manager.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/fsl_clock_manager.h
+fsl_power_manager.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/fsl_power_manager.h
+fsl_mcglite_hal.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/fsl_mcglite_hal.h
+fsl_port_hal.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/fsl_port_hal.h
+gpio_pins.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/gpio_pins.h
+SEGGER_RTT.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.h
+warp.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp.h
+
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.h
+
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.c
 stdlib.h
 -
@@ -1161,6 +1191,8 @@ devBMX055.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devBMX055.h
 devMMA8451Q.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devMMA8451Q.h
+devINA219.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.h
 devHDC1000.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devHDC1000.h
 devMAG3110.h
@@ -1175,6 +1207,8 @@ devAMG8834.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devAMG8834.h
 devMMA8451Q.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devMMA8451Q.h
+devINA219.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.h
 
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-powermodes.c
 stdint.h

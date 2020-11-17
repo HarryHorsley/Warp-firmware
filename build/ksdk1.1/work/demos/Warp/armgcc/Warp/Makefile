@@ -339,6 +339,33 @@ students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devHDC1000.c.s:
 	$(MAKE) -f CMakeFiles/Warp.dir/build.make CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devHDC1000.c.s
 .PHONY : students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devHDC1000.c.s
 
+students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.obj: students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
+
+.PHONY : students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.obj
+
+# target to build an object file
+students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj:
+	$(MAKE) -f CMakeFiles/Warp.dir/build.make CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
+.PHONY : students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
+
+students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.i: students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.i
+
+.PHONY : students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.i
+
+# target to preprocess a source file
+students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.i:
+	$(MAKE) -f CMakeFiles/Warp.dir/build.make CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.i
+.PHONY : students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.i
+
+students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.s: students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.s
+
+.PHONY : students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.s
+
+# target to generate assembly for a file
+students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.s:
+	$(MAKE) -f CMakeFiles/Warp.dir/build.make CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.s
+.PHONY : students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.s
+
 students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.obj: students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.c.obj
 
 .PHONY : students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.obj
@@ -705,6 +732,9 @@ help:
 	@echo "... students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devHDC1000.obj"
 	@echo "... students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devHDC1000.i"
 	@echo "... students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devHDC1000.s"
+	@echo "... students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.obj"
+	@echo "... students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.i"
+	@echo "... students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.s"
 	@echo "... students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.obj"
 	@echo "... students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.i"
 	@echo "... students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.s"
