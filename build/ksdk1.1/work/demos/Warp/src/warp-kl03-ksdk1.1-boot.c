@@ -54,7 +54,8 @@
 #include "gpio_pins.h"
 #include "SEGGER_RTT.h"
 #include "warp.h"
-//#include "devSSD1331.h"
+#include "devSSD1331.h"
+#include "devINA219.h"
 
 #define WARP_FRDMKL03
 
@@ -63,7 +64,7 @@
 *    Comment out the header file to disable devices
 */
 #ifndef WARP_FRDMKL03
-#    include "devSSD1331.h"
+/*#    include "devSSD1331.h"
 #    include "devBMX055.h"
 #    include "devMMA8451Q.h"
 #   include "devINA219.h"
@@ -72,7 +73,7 @@
 #    include "devL3GD20H.h"
 #    include "devBME680.h"
 #    include "devCCS811.h"
-#    include "devAMG8834.h"
+#    include "devAMG8834.h"*/
 //#    include "devMAX11300.h"
 //#include "devTCS34725.h"
 //#include "devSI4705.h"
@@ -86,7 +87,7 @@
 //#include "devISL23415.h"
 #else
 //#    include "devMMA8451Q.h"
-#	include "devINA219.h"
+//#	include "devINA219.h"
 #endif
 
 
@@ -2555,13 +2556,24 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
                     0x01,/* Normal read 8bit, 800Hz, normal, active mode */
                     i2cPullupValue
                     );
-    #endif
+#endif
     #ifdef WARP_BUILD_ENABLE_DEVMAG3110
     numberOfConfigErrors += configureSensorMAG3110(    0x00,/*    Payload: DR 000, OS 00, 80Hz, ADC 1280, Full 16bit, standby mode to set up register*/
                     0xA0,/*    Payload: AUTO_MRST_EN enable, RAW value without offset */
                     i2cPullupValue
                     );
     #endif
+    
+#ifdef WARP_BUILD_ENABLE_DEVINA219
+    //Configure device
+    numberOfConfigErrors += configureSensorINA219(0x399F,/* Payload: Defaults*/
+    0x0000,/* Calibration standard*/
+    i2cPullupValue
+    );
+    
+    SEGGER_RTT_WriteString(0, "Completed configuration for current sensor");
+#endif
+    
     #ifdef WARP_BUILD_ENABLE_DEVL3GD20H
     numberOfConfigErrors += configureSensorL3GD20H(    0b11111111,/* ODR 800Hz, Cut-off 100Hz, see table 21, normal mode, x,y,z enable */
                     0b00100000,
@@ -2651,9 +2663,17 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
         SEGGER_RTT_WriteString(0, " MMA8451 x, MMA8451 y, MMA8451 z,");
         OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
         #endif
+        
 	#ifdef WARP_BUILD_ENABLE_DEVINA219
 	SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
 	OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+        //Configure device
+        numberOfConfigErrors += configureSensorINA219(0x399F,/* Payload: Defaults*/
+        0x0000,/* Calibration standard*/
+        i2cPullupValue
+        );
+        
+        SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
 	#endif
         #ifdef WARP_BUILD_ENABLE_DEVMAG3110
         SEGGER_RTT_WriteString(0, " MAG3110 x, MAG3110 y, MAG3110 z, MAG3110 Temp,");
@@ -2702,9 +2722,16 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
         #ifdef WARP_BUILD_ENABLE_DEVMMA8451Q
         printSensorDataMMA8451Q(hexModeFlag);
         #endif
-	#ifdef WARP_BUILD_ENABLE_INA219
-	printSensorDataINA219(hexModeFlag);
-	#endif
+
+        SEGGER_RTT_WriteString(0, "\nStarting the Current Sensor Reading.\n");
+        
+        
+        //Read data point from device
+        printSensorDataINA219(0); // No hex mode
+
+        SEGGER_RTT_WriteString(0, "\nFucking completed it mate");
+        
+
         #ifdef WARP_BUILD_ENABLE_DEVMAG3110
         printSensorDataMAG3110(hexModeFlag);
         #endif

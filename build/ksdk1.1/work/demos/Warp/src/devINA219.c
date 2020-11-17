@@ -138,6 +138,7 @@ readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
 
     if (status != kStatus_I2C_Success)
     {
+        SEGGER_RTT_printf(0, "Device Communication FAILED son!");
         return kWarpStatusDeviceCommunicationFailed;
     }
 
@@ -174,11 +175,11 @@ printSensorDataINA219(bool hexModeFlag)
     {
         if (hexModeFlag)
         {
-            SEGGER_RTT_printf(0, " 0x%02x,", readSensorRegisterValue);
+            SEGGER_RTT_printf(0, "Current: 0x%02x,", readSensorRegisterValue);
         }
         else
         {
-            SEGGER_RTT_printf(0, " %d,", readSensorRegisterValue);
+            SEGGER_RTT_printf(0, "Current: %d,", readSensorRegisterValue);
         }
     }
 }

@@ -1187,6 +1187,8 @@ warp.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp.h
 devSSD1331.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.h
+devINA219.h
+/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.h
 devBMX055.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devBMX055.h
 devMMA8451Q.h
@@ -1205,8 +1207,6 @@ devCCS811.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devCCS811.h
 devAMG8834.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devAMG8834.h
-devINA219.h
-/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.h
 
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-powermodes.c
 stdint.h
