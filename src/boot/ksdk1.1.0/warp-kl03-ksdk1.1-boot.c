@@ -2184,8 +2184,6 @@ main(void)
 
                 break;
             }
-            
-            }
 
             /*
              *    Stress test, including bit-wise toggling and checksum, as well as extensive add and mul, with continous read and write to I2C MMA8451Q
@@ -2557,7 +2555,7 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
                     0x01,/* Normal read 8bit, 800Hz, normal, active mode */
                     i2cPullupValue
                     );
-
+#endif
     #ifdef WARP_BUILD_ENABLE_DEVMAG3110
     numberOfConfigErrors += configureSensorMAG3110(    0x00,/*    Payload: DR 000, OS 00, 80Hz, ADC 1280, Full 16bit, standby mode to set up register*/
                     0xA0,/*    Payload: AUTO_MRST_EN enable, RAW value without offset */
