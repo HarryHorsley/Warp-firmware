@@ -35,7 +35,7 @@ initINA219(const uint8_t i2cAddress, WarpI2CDeviceState volatile *  deviceStateP
 }
 
 WarpStatus
-writeSensorRegisterINA219(uint8_t deviceRegister, uint16_t payload, uint16_t menuI2cPullupValue)
+writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload, uint16_t menuI2cPullupValue)
 {
     uint8_t        payloadByte[1], commandByte[1];
     i2c_status_t    status;
@@ -125,7 +125,7 @@ readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
     };
 
 
-    cmdBuf[0] = deviceRegister;
+    cmdBuf[0] = 0x41;
 
     status = I2C_DRV_MasterReceiveDataBlocking(
                             0 /* I2C peripheral instance */,
@@ -141,14 +141,17 @@ readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
         SEGGER_RTT_printf(0, "Device Communication FAILED son!");
         return kWarpStatusDeviceCommunicationFailed;
     }
-
+    
+    SEGGER_RTT_printf(0, "Device Communication Got to here son!");
     return kWarpStatusOK;
 }
 
 void
 printSensorDataINA219(bool hexModeFlag)
 {
-    uint16_t    readSensorRegisterValue;
+    uint16_t    readSensorRegisterValueLSB;
+    uint16_t    readSensorRegisterValueMSB;
+    int16_t        readSensorRegisterValueCombined;
     WarpStatus    i2cReadStatus;
 
 
@@ -165,21 +168,24 @@ printSensorDataINA219(bool hexModeFlag)
      *    We could also improve things by doing a 6-byte read transaction.
      */
     i2cReadStatus = readSensorRegisterINA219(kWarpSensorOutputRegisterINA219Current, 2 /* numberOfBytes */);
-    readSensorRegisterValue = deviceINA219State.i2cBuffer[0]; // Maybe get rid of the [0] here I don''t know
-
+    readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0]; // Maybe get rid of the [0] here I don''t know
+    readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
+    
+    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 6) | (readSensorRegisterValueLSB >> 2);
+    
     if (i2cReadStatus != kWarpStatusOK)
     {
-        SEGGER_RTT_WriteString(0, " ----,");
+        SEGGER_RTT_WriteString(0, " ----, doesn't work");
     }
     else
     {
         if (hexModeFlag)
         {
-            SEGGER_RTT_printf(0, "Current: 0x%02x,", readSensorRegisterValue);
+            SEGGER_RTT_printf(0, "Current: 0x%02x,", readSensorRegisterValueCombined);
         }
         else
         {
-            SEGGER_RTT_printf(0, "Current: %d,", readSensorRegisterValue);
+            SEGGER_RTT_printf(0, "Current is: %d,", readSensorRegisterValueCombined);
         }
     }
 }
