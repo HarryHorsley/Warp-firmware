@@ -87,8 +87,7 @@ ENDIF()
 ADD_EXECUTABLE(Warp 
     "${ProjDirPath}/../../../../platform/utilities/src/fsl_misc_utilities.c"
     "${ProjDirPath}/../../../../platform/startup/MKL03Z4/gcc/startup_MKL03Z4.S"
-#    "${ProjDirPath}/../../src/warp-kl03-ksdk1.1-boot.c"
-	"${ProjDirPath}/../../src/warp-kl03-ksdk1.1-boot_EDIT.c"
+    "${ProjDirPath}/../../src/warp-kl03-ksdk1.1-boot.c"
     "${ProjDirPath}/../../src/warp-kl03-ksdk1.1-powermodes.c"
     "${ProjDirPath}/../../src/devBMX055.c"
 #    "${ProjDirPath}/../../src/devADXL362.c"

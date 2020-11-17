@@ -149,7 +149,7 @@ readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
 void
 printSensorDataINA219(bool hexModeFlag)
 {
-    uint16_t    readSensorRegisterValue
+    uint16_t    readSensorRegisterValue;
     WarpStatus    i2cReadStatus;
 
 
