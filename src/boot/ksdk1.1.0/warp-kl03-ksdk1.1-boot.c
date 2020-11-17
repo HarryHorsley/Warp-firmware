@@ -2184,23 +2184,7 @@ main(void)
 
                 break;
             }
-                
-            case 'Z':
-            {
-                SEGGER_RTT_WriteString(0, "Starting the Current Sensor Reading Process.");
-                
-                //Configure device
-                numberOfConfigErrors += configureSensorINA219(0x399F,/* Payload: Defaults*/
-                0x0000,/* Calibration standard*/
-                i2cPullupValue
-                );
-                
-                //Read data point from device
-                printSensorDataINA219(0); // No hex mode
             
-                SEGGER_RTT_WriteString(0, "Fucking completed it mate");
-                
-#endif
             }
 
             /*
@@ -2580,6 +2564,17 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
                     i2cPullupValue
                     );
     #endif
+    
+#ifdef WARP_BUILD_ENABLE_DEVINA219
+    //Configure device
+    numberOfConfigErrors += configureSensorINA219(0x399F,/* Payload: Defaults*/
+    0x0000,/* Calibration standard*/
+    i2cPullupValue
+    );
+    
+    SEGGER_RTT_WriteString(0, "Completed configuration for current sensor");
+#endif
+    
     #ifdef WARP_BUILD_ENABLE_DEVL3GD20H
     numberOfConfigErrors += configureSensorL3GD20H(    0b11111111,/* ODR 800Hz, Cut-off 100Hz, see table 21, normal mode, x,y,z enable */
                     0b00100000,
@@ -2669,6 +2664,7 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
         SEGGER_RTT_WriteString(0, " MMA8451 x, MMA8451 y, MMA8451 z,");
         OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
         #endif
+        
 	#ifdef WARP_BUILD_ENABLE_DEVINA219
 	SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
 	OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
@@ -2721,7 +2717,14 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
         printSensorDataMMA8451Q(hexModeFlag);
         #endif
 	#ifdef WARP_BUILD_ENABLE_INA219
-	printSensorDataINA219(hexModeFlag);
+        SEGGER_RTT_WriteString(0, "Starting the Current Sensor Reading.");
+        
+        
+        //Read data point from device
+        printSensorDataINA219(0); // No hex mode
+
+        SEGGER_RTT_WriteString(0, "Fucking completed it mate");
+        
 	#endif
         #ifdef WARP_BUILD_ENABLE_DEVMAG3110
         printSensorDataMAG3110(hexModeFlag);
