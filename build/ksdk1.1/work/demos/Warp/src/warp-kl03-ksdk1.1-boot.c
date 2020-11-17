@@ -2651,6 +2651,10 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
         SEGGER_RTT_WriteString(0, " MMA8451 x, MMA8451 y, MMA8451 z,");
         OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
         #endif
+	#ifdef WARP_BUILD_ENABLE_DEVINA219
+	SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
+	OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+	#endif
         #ifdef WARP_BUILD_ENABLE_DEVMAG3110
         SEGGER_RTT_WriteString(0, " MAG3110 x, MAG3110 y, MAG3110 z, MAG3110 Temp,");
         OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
@@ -2698,6 +2702,9 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
         #ifdef WARP_BUILD_ENABLE_DEVMMA8451Q
         printSensorDataMMA8451Q(hexModeFlag);
         #endif
+	#ifdef WARP_BUILD_ENABLE_INA219
+	printSensorDataINA219(hexModeFlag);
+	#endif
         #ifdef WARP_BUILD_ENABLE_DEVMAG3110
         printSensorDataMAG3110(hexModeFlag);
         #endif
