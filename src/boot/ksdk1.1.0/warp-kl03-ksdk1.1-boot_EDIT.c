@@ -1258,7 +1258,7 @@ main(void)
 #endif
     
 #ifdef WARP_BUILD_ENABLE_DEVINA219
-    initINA219( , &deviceINA219State)
+    initINA219( 0x40 /* i2cAddress */, &deviceINA219State)
 #endif
 
 #ifdef WARP_BUILD_ENABLE_DEVLPS25H
@@ -1364,7 +1364,7 @@ main(void)
 	 */
 #endif
 
-	devSSD1331init();
+	//devSSD1331init();
 
 	while (1)
 	{

@@ -43,6 +43,8 @@ typedef enum
 
 	kWarpTypeMaskTotalVOC		= (1 << 28),
 	kWarpTypeMaskEquivalentCO2	= (1 << 29),
+    
+    kWarpTypeMask
 
 
 	/*
@@ -137,6 +139,7 @@ typedef enum
 {
 	kWarpSensorADXL362,
 	kWarpSensorMMA8451Q,
+    kWarpSensorINA219
 	kWarpSensorBME680,
 	kWarpSensorBMX055accel,
 	kWarpSensorBMX055gyro,
@@ -183,6 +186,8 @@ typedef enum
 {
 	kWarpSensorConfigurationRegisterMMA8451QF_SETUP			= 0x09,
 	kWarpSensorConfigurationRegisterMMA8451QCTRL_REG1		= 0x2A,
+    
+    kWarpSensorConfigurationRegisterINA219                  = 0x00,
 
 	kWarpSensorConfigurationRegisterMAG3110CTRL_REG1		= 0x10,
 	kWarpSensorConfigurationRegisterMAG3110CTRL_REG2		= 0x11,
@@ -233,6 +238,12 @@ typedef enum
 	kWarpSensorOutputRegisterMMA8451QOUT_Y_LSB			= 0x04,
 	kWarpSensorOutputRegisterMMA8451QOUT_Z_MSB			= 0x05,
 	kWarpSensorOutputRegisterMMA8451QOUT_Z_LSB			= 0x06,
+    
+    kWarpSensorOutputRegisterINA219ShuntVoltage         = 0x01,
+    kWarpSensorOutputRegisterINA219BusVoltage           = 0x02,
+    kWarpSensorOutputRegisterINA219Power                = 0x03,
+    kWarpSensorOutputRegisterINA219Current              = 0x04,
+    kWarpSensorOutputRegisterINA219Calibration          = 0x05,
 
 	kWarpSensorOutputRegisterMAG3110OUT_X_MSB			= 0x01,
 	kWarpSensorOutputRegisterMAG3110OUT_X_LSB			= 0x02,
