@@ -1205,8 +1205,6 @@ devCCS811.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devCCS811.h
 devAMG8834.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devAMG8834.h
-devMMA8451Q.h
-/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devMMA8451Q.h
 devINA219.h
 /students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.h
 
