@@ -2723,13 +2723,12 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
         printSensorDataMMA8451Q(hexModeFlag);
         #endif
 
-        SEGGER_RTT_WriteString(0, "\nStarting the Current Sensor Reading.\n");
+        SEGGER_RTT_WriteString(0, "\nStarting the Current Sensor Process.\n");
         
-        
+        //write to current sensor
+        writeSensorRegisterINA219(0x04, 0x00, i2cPullupValue);
         //Read data point from device
         printSensorDataINA219(0); // No hex mode
-
-        SEGGER_RTT_WriteString(0, "\nFucking completed it mate");
         
 
         #ifdef WARP_BUILD_ENABLE_DEVMAG3110
