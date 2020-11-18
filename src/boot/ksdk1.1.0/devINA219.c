@@ -30,10 +30,10 @@ void
 initINA219(const uint8_t i2cAddress, WarpI2CDeviceState volatile *  deviceStatePointer)
 {
     deviceStatePointer->i2cAddress    = i2cAddress;
-    deviceStatePointer->signalType = (    kWarpTypeMaskShuntVoltage |
-                                      kWarpTypeMaskBusVoltage |
-                                      kWarpTypeMaskPower |
-                                      kWarpTypeMaskCurrent
+    deviceStatePointer->signalType = (    kWarpTypeMaskTemperature |
+                                      kWarpTypeMaskPressure |
+                                      kWarpTypeMaskHumidity |
+                                      kWarpTypeMaskC02Concentration
                                   );
     return;
 }
@@ -78,10 +78,10 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint16_t payload, uint16_t men
                             gWarpI2cTimeoutMilliseconds);
     if (status != kStatus_I2C_Success)
     {
-        SEGGER_RTT_WriteString(0, "\nDidnt write succesfully.")
+        SEGGER_RTT_WriteString(0, "\nDidnt write succesfully.");
         return kWarpStatusDeviceCommunicationFailed;
     }
-    SEGGER_RTT_WriteString(0, "\nWrite succesfull.")
+    SEGGER_RTT_WriteString(0, "\nWrite succesfull.");
     return kWarpStatusOK;
 }
 
