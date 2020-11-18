@@ -15,7 +15,7 @@ WarpStatus    readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes
 WarpStatus    writeSensorRegisterINA219(uint8_t deviceRegister,
                     uint16_t payload,
                     uint16_t menuI2cPullupValue);
-WarpStatus    configureSensorINA219(uint8_t payload_SETUP1, uint8_t payload_SETUP2, uint8_t payload_CALIB1, uint8_t payload_CALIB2, uint16_t menuI2cPullupValue);
+//WarpStatus    configureSensorINA219(uint8_t payload_SETUP1, uint8_t payload_SETUP2, uint8_t payload_CALIB1, uint8_t payload_CALIB2, uint16_t menuI2cPullupValue);
 WarpStatus    readSensorSignalINA219(WarpTypeMask signal,
                     WarpSignalPrecision precision,
                     WarpSignalAccuracy accuracy,
