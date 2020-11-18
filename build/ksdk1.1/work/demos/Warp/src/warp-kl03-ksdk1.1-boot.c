@@ -2017,12 +2017,9 @@ main(void)
 #endif
 
                 SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
-                OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
                     //Configure device
-                    configureSensorINA219(0x39, 0x9F,/* Payload: Defaults*/
-                    0x3F, 0xFC,/* Calibration standard*/
-                    menuI2cPullupValue
-                    );
+                    writeSensorRegisterINA219(0x00, 0x39, 0x9F, menuI2cPullupValue);
+                    writeSensorRegisterINA219(0x05, 0x3F, 0xFC, menuI2cPullupValue);
                     
                     SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
                 
