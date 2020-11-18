@@ -34,35 +34,45 @@ initINA219(const uint8_t i2cAddress, WarpI2CDeviceState volatile *  deviceStateP
 }
 
 WarpStatus
-writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payload2, uint16_t menuI2cPullupValue)
+writeSensorRegisterINA219(uint8_t deviceRegister, uint16_t payload, uint16_t menuI2cPullupValue)
 {
-    uint8_t        payloadBytes[2], commandByte[1];
+
+    uint8_t        payloadByte[2], commandByte[1];
     i2c_status_t    status;
+
+    switch (deviceRegister)
+    {
+        case 0x00:  case 0x05:
+        {
+            /* OK */
+            break;
+        }
+        
+        default:
+        {
+            return kWarpStatusBadDeviceCommand;
+        }
+    }
 
     i2c_device_t slave =
     {
         .address = deviceINA219State.i2cAddress,
         .baudRate_kbps = gWarpI2cBaudRateKbps
     };
-
     commandByte[0] = deviceRegister;
-    payloadBytes[0] = payload2;
-    payloadBytes[1] = payload1;
-  
-    
-    
+    payloadByte[0] = (payload>>8) & 0xff;
+    payloadByte[1] = payload&(0xff);
+
     status = I2C_DRV_MasterSendDataBlocking(
                             0 /* I2C instance */,
                             &slave,
                             commandByte,
                             1,
-                            payloadBytes,
+                            payloadByte,
                             2,
                             gWarpI2cTimeoutMilliseconds);
-    
     if (status != kStatus_I2C_Success)
     {
-        SEGGER_RTT_printf(0, "\nYou CANNOT write to this device!\n");
         return kWarpStatusDeviceCommunicationFailed;
     }
 
@@ -88,14 +98,33 @@ configureSensorINA219(uint8_t payload_SETUP1, uint8_t payload_SETUP2, uint8_t pa
 WarpStatus
 readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
 {
-    uint8_t        cmdBuf[1];
+    uint8_t        cmdBuf[1] = {0xFF};
     i2c_status_t    status;
+
+
+    USED(numberOfBytes);
+    switch (deviceRegister)
+    {
+        case 0x00: case 0x01: case 0x02: case 0x03:
+        case 0x04: case 0x05:
+        {
+            /* OK */
+            break;
+        }
+        
+        default:
+        {
+            return kWarpStatusBadDeviceCommand;
+        }
+    }
+
 
     i2c_device_t slave =
     {
         .address = deviceINA219State.i2cAddress,
         .baudRate_kbps = gWarpI2cBaudRateKbps
     };
+
 
     cmdBuf[0] = deviceRegister;
 
@@ -105,16 +134,14 @@ readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
                             cmdBuf,
                             1,
                             (uint8_t *)deviceINA219State.i2cBuffer,
-                            2,
+                            numberOfBytes,
                             gWarpI2cTimeoutMilliseconds);
 
     if (status != kStatus_I2C_Success)
     {
-        SEGGER_RTT_printf(0, "Device Communication FAILED son!");
         return kWarpStatusDeviceCommunicationFailed;
     }
-    
-    SEGGER_RTT_printf(0, "Device Communication Got to here son!");
+
     return kWarpStatusOK;
 }
 
@@ -144,7 +171,7 @@ printSensorDataINA219(bool hexModeFlag)
     
     readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
     
-    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 6) | (readSensorRegisterValueLSB >> 2);
+    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 8) | (readSensorRegisterValueLSB);
     
     if (i2cReadStatus != kWarpStatusOK)
     {
@@ -159,6 +186,29 @@ printSensorDataINA219(bool hexModeFlag)
         else
         {
             SEGGER_RTT_printf(0, "Current is: %d,", readSensorRegisterValueCombined);
+        }
+    }
+    
+    i2cReadStatus = readSensorRegisterINA219(0x05, 2 /* numberOfBytes */);
+    readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
+    
+    readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
+    
+    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 8) | (readSensorRegisterValueLSB);
+    
+    if (i2cReadStatus != kWarpStatusOK)
+    {
+        SEGGER_RTT_WriteString(0, " ----, doesn't work");
+    }
+    else
+    {
+        if (hexModeFlag)
+        {
+            SEGGER_RTT_printf(0, "\nCalibration: 0x%02x,", readSensorRegisterValueCombined);
+        }
+        else
+        {
+            SEGGER_RTT_printf(0, "\nCalibration: %d,", readSensorRegisterValueCombined);
         }
     }
 }

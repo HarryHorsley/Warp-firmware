@@ -1978,6 +1978,68 @@ main(void)
             /*
              *    Start repeated read
              */
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            case 'N':
+            {
+                enableI2Cpins(menuI2cPullupValue);
+                
+                SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
+                    //Configure device
+                writeSensorRegisterINA219(0x00, 0x399F, menuI2cPullupValue);
+                writeSensorRegisterINA219(0x05, 0x3FFC, menuI2cPullupValue);
+                    
+                SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
+                
+                printSensorDataINA219(0);
+                printSensorDataINA219(1); // HEx mode
+                
+//                for (i = 0; i < 1000; i++){
+//                    printSensorDataINA219(0); // NO hex mode flag
+//                }
+            }
+            
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
             case 'j':
             {
                 bool        autoIncrement, chatty;
@@ -2016,12 +2078,7 @@ main(void)
                     menuTargetSensor, menuRegisterAddress, repetitionsPerAddress, menuI2cPullupValue, spinDelay);
 #endif
 
-                SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
-                    //Configure device
-                    writeSensorRegisterINA219(0x00, 0x39, 0x9F, menuI2cPullupValue);
-                    writeSensorRegisterINA219(0x05, 0x3F, 0xFC, menuI2cPullupValue);
-                    
-                    SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
+                
                 
                 repeatRegisterReadForDeviceAndAddress(    menuTargetSensor /*warpSensorDevice*/,
                                     menuRegisterAddress /*baseAddress */,
