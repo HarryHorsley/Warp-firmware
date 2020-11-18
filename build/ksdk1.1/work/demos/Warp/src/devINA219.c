@@ -35,24 +35,10 @@ initINA219(const uint8_t i2cAddress, WarpI2CDeviceState volatile *  deviceStateP
 }
 
 WarpStatus
-writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload, uint16_t menuI2cPullupValue)
+writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payload2, uint16_t menuI2cPullupValue)
 {
-    uint8_t        payloadByte[1], commandByte[1];
+    uint8_t        payloadBytes[2], commandByte[1];
     i2c_status_t    status;
-
-    switch (deviceRegister)
-    {
-        case 0x00: case 0x05:
-        {
-            /* OK */
-            break;
-        }
-        
-        default:
-        {
-            return kWarpStatusBadDeviceCommand;
-        }
-    }
 
     i2c_device_t slave =
     {
@@ -61,17 +47,21 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload, uint16_t menu
     };
 
     commandByte[0] = deviceRegister;
-    payloadByte[0] = payload;
+    payloadBytes[0] = payload1;
+    payloadBytes[1] = payload2;
+    
+    
     status = I2C_DRV_MasterSendDataBlocking(
                             0 /* I2C instance */,
                             &slave,
                             commandByte,
                             1,
-                            payloadByte,
-                            1,
+                            payloadBytes,
+                            2,
                             gWarpI2cTimeoutMilliseconds);
     if (status != kStatus_I2C_Success)
     {
+        SEGGER_RTT_printf(0, "You CANNOT write to this device!");
         return kWarpStatusDeviceCommunicationFailed;
     }
 
@@ -79,16 +69,16 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload, uint16_t menu
 }
 
 WarpStatus
-configureSensorINA219(uint16_t payload_SETUP, uint16_t payload_CALIB, uint16_t menuI2cPullupValue)
+configureSensorINA219(uint8_t payload_SETUP1, uint8_t payload_SETUP2, uint8_t payload_CALIB1, uint8_t payload_CALIB2, uint16_t menuI2cPullupValue)
 {
     WarpStatus    i2cWriteStatus1, i2cWriteStatus2;
 
     i2cWriteStatus1 = writeSensorRegisterINA219(kWarpSensorConfigurationRegisterINA219Config,
-                            payload_SETUP /* payload: Disable FIFO */,
+                            payload_SETUP1, payload_SETUP2 /* payload: Disable FIFO */,
                             menuI2cPullupValue);
     
     i2cWriteStatus2 = writeSensorRegisterINA219(kWarpSensorConfigurationRegisterINA219Calibration,
-                            payload_CALIB /* payload: Disable FIFO */,
+                            payload_CALIB1, payload_CALIB2 /* payload: Disable FIFO */,
                             menuI2cPullupValue);
 
     return (i2cWriteStatus1 | i2cWriteStatus2);
@@ -97,26 +87,8 @@ configureSensorINA219(uint16_t payload_SETUP, uint16_t payload_CALIB, uint16_t m
 WarpStatus
 readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
 {
-    uint8_t        cmdBuf[1] = {0xFF};
+    uint8_t        cmdBuf[1];
     i2c_status_t    status;
-
-
-    USED(numberOfBytes);
-    switch (deviceRegister)
-    {
-        case 0x00: case 0x01: case 0x02: case 0x03:
-        case 0x04: case 0x05:
-        {
-            /* OK */
-            break;
-        }
-        
-        default:
-        {
-            return kWarpStatusBadDeviceCommand;
-        }
-    }
-
 
     i2c_device_t slave =
     {
@@ -124,8 +96,7 @@ readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
         .baudRate_kbps = gWarpI2cBaudRateKbps
     };
 
-
-    cmdBuf[0] = 0x41;
+    cmdBuf[0] = deviceRegister;
 
     status = I2C_DRV_MasterReceiveDataBlocking(
                             0 /* I2C peripheral instance */,

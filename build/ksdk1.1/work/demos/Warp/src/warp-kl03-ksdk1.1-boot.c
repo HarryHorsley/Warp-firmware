@@ -2644,118 +2644,118 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
 
     if (printHeadersAndCalibration)
     {
-        SEGGER_RTT_WriteString(0, "Measurement number, RTC->TSR, RTC->TPR,");
+        SEGGER_RTT_WriteString(0, "Beginning measurements");
         OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
 
-        #ifdef WARP_BUILD_ENABLE_DEVAMG8834
-        for (uint8_t i = 0; i < 64; i++)
-        {
-            #ifdef WARP_BUILD_ENABLE_SEGGER_RTT_PRINTF
-            SEGGER_RTT_printf(0, " AMG8834 %d,", i);
-            OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-            #endif
-        }
-        SEGGER_RTT_WriteString(0, " AMG8834 Temp,");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        #endif
-
-        #ifdef WARP_BUILD_ENABLE_DEVMMA8451Q
-        SEGGER_RTT_WriteString(0, " MMA8451 x, MMA8451 y, MMA8451 z,");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVAMG8834
+//        for (uint8_t i = 0; i < 64; i++)
+//        {
+//            #ifdef WARP_BUILD_ENABLE_SEGGER_RTT_PRINTF
+//            SEGGER_RTT_printf(0, " AMG8834 %d,", i);
+//            OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//            #endif
+//        }
+//        SEGGER_RTT_WriteString(0, " AMG8834 Temp,");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        #endif
+//
+//        #ifdef WARP_BUILD_ENABLE_DEVMMA8451Q
+//        SEGGER_RTT_WriteString(0, " MMA8451 x, MMA8451 y, MMA8451 z,");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        #endif
         
 	#ifdef WARP_BUILD_ENABLE_DEVINA219
 	SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
 	OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
         //Configure device
-        numberOfConfigErrors += configureSensorINA219(0x399F,/* Payload: Defaults*/
+        configureSensorINA219(0x399F,/* Payload: Defaults*/
         0x0000,/* Calibration standard*/
         i2cPullupValue
         );
         
         SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
 	#endif
-        #ifdef WARP_BUILD_ENABLE_DEVMAG3110
-        SEGGER_RTT_WriteString(0, " MAG3110 x, MAG3110 y, MAG3110 z, MAG3110 Temp,");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVL3GD20H
-        SEGGER_RTT_WriteString(0, " L3GD20H x, L3GD20H y, L3GD20H z, L3GD20H Temp,");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVBME680
-        SEGGER_RTT_WriteString(0, " BME680 Press, BME680 Temp, BME680 Hum,");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVBMX055
-        SEGGER_RTT_WriteString(0, " BMX055acc x, BMX055acc y, BMX055acc z, BMX055acc Temp,");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        SEGGER_RTT_WriteString(0, " BMX055mag x, BMX055mag y, BMX055mag z, BMX055mag RHALL,");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        SEGGER_RTT_WriteString(0, " BMX055gyro x, BMX055gyro y, BMX055gyro z,");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVCCS811
-        SEGGER_RTT_WriteString(0, " CCS811 ECO2, CCS811 TVOC, CCS811 RAW ADC value, CCS811 RAW R_REF value, CCS811 RAW R_NTC value,");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVHDC1000
-        SEGGER_RTT_WriteString(0, " HDC1000 Temp, HDC1000 Hum,");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        #endif
-        SEGGER_RTT_WriteString(0, " RTC->TSR, RTC->TPR, # Config Errors");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
-        SEGGER_RTT_WriteString(0, "\n\n");
-        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        #ifdef WARP_BUILD_ENABLE_DEVMAG3110
+//        SEGGER_RTT_WriteString(0, " MAG3110 x, MAG3110 y, MAG3110 z, MAG3110 Temp,");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVL3GD20H
+//        SEGGER_RTT_WriteString(0, " L3GD20H x, L3GD20H y, L3GD20H z, L3GD20H Temp,");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVBME680
+//        SEGGER_RTT_WriteString(0, " BME680 Press, BME680 Temp, BME680 Hum,");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVBMX055
+//        SEGGER_RTT_WriteString(0, " BMX055acc x, BMX055acc y, BMX055acc z, BMX055acc Temp,");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        SEGGER_RTT_WriteString(0, " BMX055mag x, BMX055mag y, BMX055mag z, BMX055mag RHALL,");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        SEGGER_RTT_WriteString(0, " BMX055gyro x, BMX055gyro y, BMX055gyro z,");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVCCS811
+//        SEGGER_RTT_WriteString(0, " CCS811 ECO2, CCS811 TVOC, CCS811 RAW ADC value, CCS811 RAW R_REF value, CCS811 RAW R_NTC value,");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVHDC1000
+//        SEGGER_RTT_WriteString(0, " HDC1000 Temp, HDC1000 Hum,");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        #endif
+//        SEGGER_RTT_WriteString(0, " RTC->TSR, RTC->TPR, # Config Errors");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+//        SEGGER_RTT_WriteString(0, "\n\n");
+//        OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
     }
 
-
+    SEGGER_RTT_WriteString(0, "\nStarting the Current Sensor Process.\n");
+    
     while(1)
     {
         #ifdef WARP_BUILD_ENABLE_SEGGER_RTT_PRINTF
-        SEGGER_RTT_printf(0, "%u, %d, %d,", readingCount, RTC->TSR, RTC->TPR);
+        SEGGER_RTT_printf(0, "%u", readingCount);
         #endif
+//
+//        #ifdef WARP_BUILD_ENABLE_DEVAMG8834
+//        printSensorDataAMG8834(hexModeFlag);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVMMA8451Q
+//        printSensorDataMMA8451Q(hexModeFlag);
+//        #endif
 
-        #ifdef WARP_BUILD_ENABLE_DEVAMG8834
-        printSensorDataAMG8834(hexModeFlag);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVMMA8451Q
-        printSensorDataMMA8451Q(hexModeFlag);
-        #endif
-
-        SEGGER_RTT_WriteString(0, "\nStarting the Current Sensor Process.\n");
         
-        //write to current sensor
-        writeSensorRegisterINA219(0x04, 0x00, i2cPullupValue);
+        
         //Read data point from device
         printSensorDataINA219(0); // No hex mode
+
         
 
-        #ifdef WARP_BUILD_ENABLE_DEVMAG3110
-        printSensorDataMAG3110(hexModeFlag);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVL3GD20H
-        printSensorDataL3GD20H(hexModeFlag);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVBME680
-        printSensorDataBME680(hexModeFlag);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVBMX055
-        printSensorDataBMX055accel(hexModeFlag);
-        printSensorDataBMX055mag(hexModeFlag);
-        printSensorDataBMX055gyro(hexModeFlag);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVCCS811
-        printSensorDataCCS811(hexModeFlag);
-        #endif
-        #ifdef WARP_BUILD_ENABLE_DEVHDC1000
-        printSensorDataHDC1000(hexModeFlag);
-        #endif
-
-
-        #ifdef WARP_BUILD_ENABLE_SEGGER_RTT_PRINTF
-        SEGGER_RTT_printf(0, " %d, %d, %d\n", RTC->TSR, RTC->TPR, numberOfConfigErrors);
-        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVMAG3110
+//        printSensorDataMAG3110(hexModeFlag);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVL3GD20H
+//        printSensorDataL3GD20H(hexModeFlag);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVBME680
+//        printSensorDataBME680(hexModeFlag);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVBMX055
+//        printSensorDataBMX055accel(hexModeFlag);
+//        printSensorDataBMX055mag(hexModeFlag);
+//        printSensorDataBMX055gyro(hexModeFlag);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVCCS811
+//        printSensorDataCCS811(hexModeFlag);
+//        #endif
+//        #ifdef WARP_BUILD_ENABLE_DEVHDC1000
+//        printSensorDataHDC1000(hexModeFlag);
+//        #endif
+//
+//
+//        #ifdef WARP_BUILD_ENABLE_SEGGER_RTT_PRINTF
+//        SEGGER_RTT_printf(0, " %d, %d, %d\n", RTC->TSR, RTC->TPR, numberOfConfigErrors);
+//        #endif
 
         if (menuDelayBetweenEachRun > 0)
         {
