@@ -2013,6 +2013,7 @@ main(void)
 //                for (i = 0; i < 1000; i++){
 //                    printSensorDataINA219(0); // NO hex mode flag
 //                }
+                break
             }
             
                 
