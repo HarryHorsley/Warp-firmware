@@ -47,8 +47,8 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payl
     };
 
     commandByte[0] = deviceRegister;
-    payloadBytes[0] = payload1
-    payloadBytes[1] = payload2
+    payloadBytes[0] = payload1;
+    payloadBytes[1] = payload2;
     
     
     status = I2C_DRV_MasterSendDataBlocking(
