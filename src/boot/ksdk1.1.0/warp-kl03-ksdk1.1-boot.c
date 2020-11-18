@@ -2021,7 +2021,7 @@ main(void)
                     //Configure device
                     configureSensorINA219(0x39, 0x9F,/* Payload: Defaults*/
                     0x3F, 0xFC,/* Calibration standard*/
-                    i2cPullupValue
+                    menuI2cPullupValue
                     );
                     
                     SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
