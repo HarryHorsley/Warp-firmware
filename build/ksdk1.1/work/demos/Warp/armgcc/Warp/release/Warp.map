@@ -358,7 +358,7 @@ Discarded input sections
  .data          0x0000000000000000        0x0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.c.obj
  .text.initISL23415
-                0x0000000000000000        0xc CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.c.obj
+                0x0000000000000000        0x6 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.c.obj
  .text.readDeviceRegisterISL23415
                 0x0000000000000000       0xd0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devISL23415.c.obj
  .text.writeDeviceRegisterISL23415
@@ -1111,7 +1111,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  .FlashConfig   0x0000000000000400       0x10 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/startup/MKL03Z4/gcc/startup_MKL03Z4.S.obj
                 0x0000000000000410                . = ALIGN (0x4)
 
-.text           0x0000000000000410     0x638c
+.text           0x0000000000000410     0x63b0
                 0x0000000000000410                . = ALIGN (0x4)
  *(.text)
  .text          0x0000000000000410       0x98 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
@@ -1296,556 +1296,557 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x000000000000177c       0x34 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
                 0x000000000000177c                activateAllLowPowerSensorModes
  .text.startup.main
-                0x00000000000017b0      0xb9c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
+                0x00000000000017b0      0xbcc CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
                 0x00000000000017b0                main
  .text.setSleepRtcAlarm
-                0x000000000000234c       0x2e CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-powermodes.c.obj
- *fill*         0x000000000000237a        0x2 
+                0x000000000000237c       0x2e CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-powermodes.c.obj
+ *fill*         0x00000000000023aa        0x2 
  .text.gpioDisableWakeUp
-                0x000000000000237c       0x18 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-powermodes.c.obj
-                0x000000000000237c                gpioDisableWakeUp
+                0x00000000000023ac       0x18 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-powermodes.c.obj
+                0x00000000000023ac                gpioDisableWakeUp
  .text.warpSetLowPowerMode
-                0x0000000000002394       0xf2 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-powermodes.c.obj
-                0x0000000000002394                warpSetLowPowerMode
+                0x00000000000023c4       0xf2 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-powermodes.c.obj
+                0x00000000000023c4                warpSetLowPowerMode
  .text._GetAvailWriteSpace
-                0x0000000000002486       0x12 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x00000000000024b6       0x12 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
  .text._WriteNoCheck
-                0x0000000000002498       0x30 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x00000000000024c8       0x30 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
  .text._WriteBlocking
-                0x00000000000024c8       0x5a CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
- *fill*         0x0000000000002522        0x2 
- .text._DoInit  0x0000000000002524       0x5c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x00000000000024f8       0x5a CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+ *fill*         0x0000000000002552        0x2 
+ .text._DoInit  0x0000000000002554       0x5c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
  .text.SEGGER_RTT_ReadNoLock
-                0x0000000000002580       0xa4 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
-                0x0000000000002580                SEGGER_RTT_ReadNoLock
+                0x00000000000025b0       0xa4 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x00000000000025b0                SEGGER_RTT_ReadNoLock
  .text.SEGGER_RTT_Read
-                0x0000000000002624       0x1a CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
-                0x0000000000002624                SEGGER_RTT_Read
- *fill*         0x000000000000263e        0x2 
+                0x0000000000002654       0x1a CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x0000000000002654                SEGGER_RTT_Read
+ *fill*         0x000000000000266e        0x2 
  .text.SEGGER_RTT_WriteNoLock
-                0x0000000000002640       0x6c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
-                0x0000000000002640                SEGGER_RTT_WriteNoLock
+                0x0000000000002670       0x6c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x0000000000002670                SEGGER_RTT_WriteNoLock
  .text.SEGGER_RTT_Write
-                0x00000000000026ac       0x34 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
-                0x00000000000026ac                SEGGER_RTT_Write
+                0x00000000000026dc       0x34 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x00000000000026dc                SEGGER_RTT_Write
  .text.SEGGER_RTT_WriteString
-                0x00000000000026e0       0x18 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
-                0x00000000000026e0                SEGGER_RTT_WriteString
+                0x0000000000002710       0x18 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x0000000000002710                SEGGER_RTT_WriteString
  .text.SEGGER_RTT_GetKey
-                0x00000000000026f8       0x1e CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
-                0x00000000000026f8                SEGGER_RTT_GetKey
+                0x0000000000002728       0x1e CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x0000000000002728                SEGGER_RTT_GetKey
  .text.SEGGER_RTT_WaitKey
-                0x0000000000002716        0xc CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
-                0x0000000000002716                SEGGER_RTT_WaitKey
- *fill*         0x0000000000002722        0x2 
+                0x0000000000002746        0xc CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x0000000000002746                SEGGER_RTT_WaitKey
+ *fill*         0x0000000000002752        0x2 
  .text.SEGGER_RTT_ConfigUpBuffer
-                0x0000000000002724       0x60 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
-                0x0000000000002724                SEGGER_RTT_ConfigUpBuffer
+                0x0000000000002754       0x60 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x0000000000002754                SEGGER_RTT_ConfigUpBuffer
  .text._StoreChar
-                0x0000000000002784       0x3e CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_printf.c.obj
- *fill*         0x00000000000027c2        0x2 
+                0x00000000000027b4       0x3e CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_printf.c.obj
+ *fill*         0x00000000000027f2        0x2 
  .text._PrintUnsigned
-                0x00000000000027c4       0xe0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_printf.c.obj
+                0x00000000000027f4       0xe0 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_printf.c.obj
  .text.SEGGER_RTT_vprintf
-                0x00000000000028a4      0x262 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_printf.c.obj
-                0x00000000000028a4                SEGGER_RTT_vprintf
+                0x00000000000028d4      0x262 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_printf.c.obj
+                0x00000000000028d4                SEGGER_RTT_vprintf
  .text.SEGGER_RTT_printf
-                0x0000000000002b06       0x18 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_printf.c.obj
-                0x0000000000002b06                SEGGER_RTT_printf
+                0x0000000000002b36       0x18 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_printf.c.obj
+                0x0000000000002b36                SEGGER_RTT_printf
  .text.I2C0_IRQHandler
-                0x0000000000002b1e        0xa CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/drivers/src/i2c/fsl_i2c_irq.c.obj
-                0x0000000000002b1e                I2C0_IRQHandler
+                0x0000000000002b4e        0xa CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/drivers/src/i2c/fsl_i2c_irq.c.obj
+                0x0000000000002b4e                I2C0_IRQHandler
  .text.SPI0_IRQHandler
-                0x0000000000002b28        0xa CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/drivers/src/spi/fsl_spi_irq.c.obj
-                0x0000000000002b28                SPI0_IRQHandler
- *fill*         0x0000000000002b32        0x2 
+                0x0000000000002b58        0xa CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/drivers/src/spi/fsl_spi_irq.c.obj
+                0x0000000000002b58                SPI0_IRQHandler
+ *fill*         0x0000000000002b62        0x2 
  .text.SystemInit
-                0x0000000000002b34       0x84 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/startup/MKL03Z4/system_MKL03Z4.c.obj
-                0x0000000000002b34                SystemInit
+                0x0000000000002b64       0x84 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/startup/MKL03Z4/system_MKL03Z4.c.obj
+                0x0000000000002b64                SystemInit
  .text.init_data_bss
-                0x0000000000002bb8       0x70 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/startup/startup.c.obj
-                0x0000000000002bb8                init_data_bss
+                0x0000000000002be8       0x70 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/platform/startup/startup.c.obj
+                0x0000000000002be8                init_data_bss
  .text.writeCommand
-                0x0000000000002c28       0x4c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+                0x0000000000002c58       0x4c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
  .text.devSSD1331init
-                0x0000000000002c74      0x1cc CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
-                0x0000000000002c74                devSSD1331init
+                0x0000000000002ca4      0x1cc CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+                0x0000000000002ca4                devSSD1331init
  .text.initINA219
-                0x0000000000002e40        0x8 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
-                0x0000000000002e40                initINA219
+                0x0000000000002e70        0xa CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
+                0x0000000000002e70                initINA219
+ *fill*         0x0000000000002e7a        0x2 
  .text.writeSensorRegisterINA219
-                0x0000000000002e48       0x6c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
-                0x0000000000002e48                writeSensorRegisterINA219
+                0x0000000000002e7c       0x6c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
+                0x0000000000002e7c                writeSensorRegisterINA219
  .text.readSensorRegisterINA219
-                0x0000000000002eb4       0x5c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
-                0x0000000000002eb4                readSensorRegisterINA219
+                0x0000000000002ee8       0x68 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
+                0x0000000000002ee8                readSensorRegisterINA219
  .text.printSensorDataINA219
-                0x0000000000002f10      0x170 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
-                0x0000000000002f10                printSensorDataINA219
+                0x0000000000002f50      0x128 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
+                0x0000000000002f50                printSensorDataINA219
  .text.OSA_SemaCreate
-                0x0000000000003080        0xe ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x0000000000003080                OSA_SemaCreate
+                0x0000000000003078        0xe ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x0000000000003078                OSA_SemaCreate
  .text.OSA_SemaPost
-                0x000000000000308e       0x20 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x000000000000308e                OSA_SemaPost
+                0x0000000000003086       0x20 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x0000000000003086                OSA_SemaPost
  .text.OSA_SemaDestroy
-                0x00000000000030ae        0x4 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x00000000000030ae                OSA_SemaDestroy
+                0x00000000000030a6        0x4 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x00000000000030a6                OSA_SemaDestroy
  .text.OSA_EventSet
-                0x00000000000030b2       0x18 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x00000000000030b2                OSA_EventSet
- *fill*         0x00000000000030ca        0x2 
+                0x00000000000030aa       0x18 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x00000000000030aa                OSA_EventSet
+ *fill*         0x00000000000030c2        0x2 
  .text.task_init
-                0x00000000000030cc       0x38 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x00000000000030cc                task_init
+                0x00000000000030c4       0x38 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x00000000000030c4                task_init
  .text.OSA_TimeGetMsec
-                0x0000000000003104       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x0000000000003104                OSA_TimeGetMsec
+                0x00000000000030fc       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x00000000000030fc                OSA_TimeGetMsec
  .text.OSA_SemaWait
-                0x0000000000003114       0x7a ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x0000000000003114                OSA_SemaWait
+                0x000000000000310c       0x7a ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x000000000000310c                OSA_SemaWait
  .text.OSA_TimeDelay
-                0x000000000000318e       0x26 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x000000000000318e                OSA_TimeDelay
+                0x0000000000003186       0x26 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x0000000000003186                OSA_TimeDelay
  .text.OSA_EnterCritical
-                0x00000000000031b4        0xc ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x00000000000031b4                OSA_EnterCritical
+                0x00000000000031ac        0xc ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x00000000000031ac                OSA_EnterCritical
  .text.OSA_ExitCritical
-                0x00000000000031c0        0xc ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x00000000000031c0                OSA_ExitCritical
+                0x00000000000031b8        0xc ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x00000000000031b8                OSA_ExitCritical
  .text.OSA_Init
-                0x00000000000031cc       0x48 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
-                0x00000000000031cc                OSA_Init
+                0x00000000000031c4       0x48 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_os_abstraction_bm.c.obj)
+                0x00000000000031c4                OSA_Init
  .text.CLOCK_SYS_Init
-                0x0000000000003214       0x18 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_manager.c.obj)
-                0x0000000000003214                CLOCK_SYS_Init
+                0x000000000000320c       0x18 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_manager.c.obj)
+                0x000000000000320c                CLOCK_SYS_Init
  .text.CLOCK_SYS_UpdateConfiguration
-                0x000000000000322c       0xfc ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_manager.c.obj)
-                0x000000000000322c                CLOCK_SYS_UpdateConfiguration
+                0x0000000000003224       0xfc ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_manager.c.obj)
+                0x0000000000003224                CLOCK_SYS_UpdateConfiguration
  .text.CLOCK_SYS_GetCurrentConfiguration
-                0x0000000000003328        0xc ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_manager.c.obj)
-                0x0000000000003328                CLOCK_SYS_GetCurrentConfiguration
+                0x0000000000003320        0xc ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_manager.c.obj)
+                0x0000000000003320                CLOCK_SYS_GetCurrentConfiguration
  .text.CLOCK_SYS_SetMcgliteMode
-                0x0000000000003334       0x84 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_manager.c.obj)
-                0x0000000000003334                CLOCK_SYS_SetMcgliteMode
+                0x000000000000332c       0x84 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_manager.c.obj)
+                0x000000000000332c                CLOCK_SYS_SetMcgliteMode
  .text.SIM_HAL_DisableClock.constprop.0
-                0x00000000000033b8       0x24 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x00000000000033b0       0x24 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
  .text.SIM_HAL_EnableClock.constprop.0
-                0x00000000000033dc       0x28 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x00000000000033d4       0x28 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
  .text.CLOCK_SYS_SetConfiguration
-                0x0000000000003404       0x58 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x0000000000003404                CLOCK_SYS_SetConfiguration
+                0x00000000000033fc       0x58 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x00000000000033fc                CLOCK_SYS_SetConfiguration
  .text.CLOCK_SYS_GetCoreClockFreq
-                0x000000000000345c       0x20 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x000000000000345c                CLOCK_SYS_GetCoreClockFreq
+                0x0000000000003454       0x20 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x0000000000003454                CLOCK_SYS_GetCoreClockFreq
  .text.CLOCK_SYS_GetSystemClockFreq
-                0x000000000000347c        0x8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x000000000000347c                CLOCK_SYS_GetSystemClockFreq
+                0x0000000000003474        0x8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x0000000000003474                CLOCK_SYS_GetSystemClockFreq
  .text.CLOCK_SYS_GetBusClockFreq
-                0x0000000000003484       0x20 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x0000000000003484                CLOCK_SYS_GetBusClockFreq
+                0x000000000000347c       0x20 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x000000000000347c                CLOCK_SYS_GetBusClockFreq
  .text.CLOCK_SYS_GetFlashClockFreq
-                0x00000000000034a4        0x8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x00000000000034a4                CLOCK_SYS_GetFlashClockFreq
+                0x000000000000349c        0x8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x000000000000349c                CLOCK_SYS_GetFlashClockFreq
  .text.CLOCK_SYS_GetExternalRefClock32kFreq
-                0x00000000000034ac       0x3c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x00000000000034ac                CLOCK_SYS_GetExternalRefClock32kFreq
+                0x00000000000034a4       0x3c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x00000000000034a4                CLOCK_SYS_GetExternalRefClock32kFreq
  .text.CLOCK_SYS_GetRtcFreq
-                0x00000000000034e8        0x8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x00000000000034e8                CLOCK_SYS_GetRtcFreq
+                0x00000000000034e0        0x8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x00000000000034e0                CLOCK_SYS_GetRtcFreq
  .text.CLOCK_SYS_EnablePortClock
-                0x00000000000034f0       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x00000000000034f0                CLOCK_SYS_EnablePortClock
+                0x00000000000034e8       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x00000000000034e8                CLOCK_SYS_EnablePortClock
  .text.CLOCK_SYS_EnableSpiClock
-                0x0000000000003500        0xa ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x0000000000003500                CLOCK_SYS_EnableSpiClock
+                0x00000000000034f8        0xa ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x00000000000034f8                CLOCK_SYS_EnableSpiClock
  .text.CLOCK_SYS_DisableSpiClock
-                0x000000000000350a        0xa ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x000000000000350a                CLOCK_SYS_DisableSpiClock
+                0x0000000000003502        0xa ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x0000000000003502                CLOCK_SYS_DisableSpiClock
  .text.CLOCK_SYS_EnableI2cClock
-                0x0000000000003514        0xa ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x0000000000003514                CLOCK_SYS_EnableI2cClock
+                0x000000000000350c        0xa ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x000000000000350c                CLOCK_SYS_EnableI2cClock
  .text.CLOCK_SYS_DisableI2cClock
-                0x000000000000351e        0xa ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
-                0x000000000000351e                CLOCK_SYS_DisableI2cClock
+                0x0000000000003516        0xa ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+                0x0000000000003516                CLOCK_SYS_DisableI2cClock
  .text.INT_SYS_EnableIRQGlobal
-                0x0000000000003528       0x18 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_interrupt_manager.c.obj)
-                0x0000000000003528                INT_SYS_EnableIRQGlobal
+                0x0000000000003520       0x18 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_interrupt_manager.c.obj)
+                0x0000000000003520                INT_SYS_EnableIRQGlobal
  .text.INT_SYS_DisableIRQGlobal
-                0x0000000000003540       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_interrupt_manager.c.obj)
-                0x0000000000003540                INT_SYS_DisableIRQGlobal
+                0x0000000000003538       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_interrupt_manager.c.obj)
+                0x0000000000003538                INT_SYS_DisableIRQGlobal
  .text.POWER_SYS_WaitForVlprStatus
-                0x0000000000003550       0x24 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_power_manager.c.obj)
+                0x0000000000003548       0x24 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_power_manager.c.obj)
  .text.POWER_SYS_WaitForRunStatus
-                0x0000000000003574       0x3c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_power_manager.c.obj)
+                0x000000000000356c       0x3c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_power_manager.c.obj)
  .text.POWER_SYS_Init
-                0x00000000000035b0       0x44 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_power_manager.c.obj)
-                0x00000000000035b0                POWER_SYS_Init
+                0x00000000000035a8       0x44 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_power_manager.c.obj)
+                0x00000000000035a8                POWER_SYS_Init
  .text.POWER_SYS_SetMode
-                0x00000000000035f4      0x2e8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_power_manager.c.obj)
-                0x00000000000035f4                POWER_SYS_SetMode
+                0x00000000000035ec      0x2e8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_power_manager.c.obj)
+                0x00000000000035ec                POWER_SYS_SetMode
  .text.POWER_SYS_GetCurrentMode
-                0x00000000000038dc       0x20 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_power_manager.c.obj)
-                0x00000000000038dc                POWER_SYS_GetCurrentMode
+                0x00000000000038d4       0x20 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_power_manager.c.obj)
+                0x00000000000038d4                POWER_SYS_GetCurrentMode
  .text.GPIO_DRV_InputPinInit
-                0x00000000000038fc       0x90 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_driver.c.obj)
-                0x00000000000038fc                GPIO_DRV_InputPinInit
+                0x00000000000038f4       0x90 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_driver.c.obj)
+                0x00000000000038f4                GPIO_DRV_InputPinInit
  .text.GPIO_DRV_OutputPinInit
-                0x000000000000398c       0x58 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_driver.c.obj)
-                0x000000000000398c                GPIO_DRV_OutputPinInit
+                0x0000000000003984       0x58 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_driver.c.obj)
+                0x0000000000003984                GPIO_DRV_OutputPinInit
  .text.GPIO_DRV_Init
-                0x00000000000039e4       0x34 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_driver.c.obj)
-                0x00000000000039e4                GPIO_DRV_Init
+                0x00000000000039dc       0x34 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_driver.c.obj)
+                0x00000000000039dc                GPIO_DRV_Init
  .text.GPIO_DRV_SetPinOutput
-                0x0000000000003a18       0x1c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_driver.c.obj)
-                0x0000000000003a18                GPIO_DRV_SetPinOutput
+                0x0000000000003a10       0x1c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_driver.c.obj)
+                0x0000000000003a10                GPIO_DRV_SetPinOutput
  .text.GPIO_DRV_ClearPinOutput
-                0x0000000000003a34       0x1c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_driver.c.obj)
-                0x0000000000003a34                GPIO_DRV_ClearPinOutput
+                0x0000000000003a2c       0x1c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_driver.c.obj)
+                0x0000000000003a2c                GPIO_DRV_ClearPinOutput
  .text.I2C_DRV_IRQHandler
-                0x0000000000003a50       0x28 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_shared_function.c.obj)
-                0x0000000000003a50                I2C_DRV_IRQHandler
+                0x0000000000003a48       0x28 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_shared_function.c.obj)
+                0x0000000000003a48                I2C_DRV_IRQHandler
  .text.I2C_HAL_WriteByte
-                0x0000000000003a78       0x14 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003a70       0x14 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
  .text.I2C_DRV_MasterWait
-                0x0000000000003a8c       0x2c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003a84       0x2c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
  .text.I2C_DRV_CompleteTransfer
-                0x0000000000003ab8       0x4c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003ab0       0x4c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
  .text.I2C_DRV_SendAddress.isra.0
-                0x0000000000003b04       0xe8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003afc       0xe8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
  .text.I2C_DRV_MasterInit
-                0x0000000000003bec       0x78 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
-                0x0000000000003bec                I2C_DRV_MasterInit
+                0x0000000000003be4       0x78 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003be4                I2C_DRV_MasterInit
  .text.I2C_DRV_MasterDeinit
-                0x0000000000003c64       0x4c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
-                0x0000000000003c64                I2C_DRV_MasterDeinit
+                0x0000000000003c5c       0x4c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003c5c                I2C_DRV_MasterDeinit
  .text.I2C_DRV_MasterSetBaudRate
-                0x0000000000003cb0       0x34 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
-                0x0000000000003cb0                I2C_DRV_MasterSetBaudRate
+                0x0000000000003ca8       0x34 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003ca8                I2C_DRV_MasterSetBaudRate
  .text.I2C_DRV_MasterSend
-                0x0000000000003ce4       0xe0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003cdc       0xe0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
  .text.I2C_DRV_MasterReceive
-                0x0000000000003dc4       0xf0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003dbc       0xf0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
  .text.I2C_DRV_MasterSendDataBlocking
-                0x0000000000003eb4       0x1a ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
-                0x0000000000003eb4                I2C_DRV_MasterSendDataBlocking
+                0x0000000000003eac       0x1a ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003eac                I2C_DRV_MasterSendDataBlocking
  .text.I2C_DRV_MasterReceiveDataBlocking
-                0x0000000000003ece       0x1a ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
-                0x0000000000003ece                I2C_DRV_MasterReceiveDataBlocking
+                0x0000000000003ec6       0x1a ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003ec6                I2C_DRV_MasterReceiveDataBlocking
  .text.I2C_DRV_MasterIRQHandler
-                0x0000000000003ee8       0x9c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
-                0x0000000000003ee8                I2C_DRV_MasterIRQHandler
+                0x0000000000003ee0       0x9c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_master_driver.c.obj)
+                0x0000000000003ee0                I2C_DRV_MasterIRQHandler
  .text.I2C_HAL_ClearInt
-                0x0000000000003f84        0xe ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_slave_driver.c.obj)
- *fill*         0x0000000000003f92        0x2 
+                0x0000000000003f7c        0xe ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_slave_driver.c.obj)
+ *fill*         0x0000000000003f8a        0x2 
  .text.I2C_DRV_SlaveIRQHandler
-                0x0000000000003f94      0x250 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_slave_driver.c.obj)
-                0x0000000000003f94                I2C_DRV_SlaveIRQHandler
+                0x0000000000003f8c      0x250 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_slave_driver.c.obj)
+                0x0000000000003f8c                I2C_DRV_SlaveIRQHandler
  .text.CLOCK_HAL_GetLircClk
-                0x00000000000041e4       0x34 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal.c.obj)
-                0x00000000000041e4                CLOCK_HAL_GetLircClk
+                0x00000000000041dc       0x34 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal.c.obj)
+                0x00000000000041dc                CLOCK_HAL_GetLircClk
  .text.CLOCK_HAL_GetOutClk
-                0x0000000000004218       0x48 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal.c.obj)
-                0x0000000000004218                CLOCK_HAL_GetOutClk
+                0x0000000000004210       0x48 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal.c.obj)
+                0x0000000000004210                CLOCK_HAL_GetOutClk
  .text.CLOCK_HAL_GetMode
-                0x0000000000004260       0x38 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal_modes.c.obj)
-                0x0000000000004260                CLOCK_HAL_GetMode
+                0x0000000000004258       0x38 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal_modes.c.obj)
+                0x0000000000004258                CLOCK_HAL_GetMode
  .text.CLOCK_HAL_SetHircMode
-                0x0000000000004298       0x38 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal_modes.c.obj)
-                0x0000000000004298                CLOCK_HAL_SetHircMode
+                0x0000000000004290       0x38 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal_modes.c.obj)
+                0x0000000000004290                CLOCK_HAL_SetHircMode
  .text.CLOCK_HAL_SetLircMode
-                0x00000000000042d0       0x84 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal_modes.c.obj)
-                0x00000000000042d0                CLOCK_HAL_SetLircMode
+                0x00000000000042c8       0x84 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal_modes.c.obj)
+                0x00000000000042c8                CLOCK_HAL_SetLircMode
  .text.CLOCK_HAL_SetExtMode
-                0x0000000000004354       0x38 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal_modes.c.obj)
-                0x0000000000004354                CLOCK_HAL_SetExtMode
+                0x000000000000434c       0x38 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_mcglite_hal_modes.c.obj)
+                0x000000000000434c                CLOCK_HAL_SetExtMode
  .text.OSC_HAL_SetExternalRefClkCmd
-                0x000000000000438c        0xe ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_osc_hal.c.obj)
-                0x000000000000438c                OSC_HAL_SetExternalRefClkCmd
+                0x0000000000004384        0xe ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_osc_hal.c.obj)
+                0x0000000000004384                OSC_HAL_SetExternalRefClkCmd
  .text.OSC_HAL_SetExternalRefClkInStopModeCmd
-                0x000000000000439a        0xe ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_osc_hal.c.obj)
-                0x000000000000439a                OSC_HAL_SetExternalRefClkInStopModeCmd
+                0x0000000000004392        0xe ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_osc_hal.c.obj)
+                0x0000000000004392                OSC_HAL_SetExternalRefClkInStopModeCmd
  .text.RTC_HAL_ConvertSecsToDatetime
-                0x00000000000043a8       0x9c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
-                0x00000000000043a8                RTC_HAL_ConvertSecsToDatetime
+                0x00000000000043a0       0x9c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
+                0x00000000000043a0                RTC_HAL_ConvertSecsToDatetime
  .text.RTC_HAL_IsDatetimeCorrectFormat
-                0x0000000000004444       0x54 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
-                0x0000000000004444                RTC_HAL_IsDatetimeCorrectFormat
+                0x000000000000443c       0x54 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
+                0x000000000000443c                RTC_HAL_IsDatetimeCorrectFormat
  .text.RTC_HAL_ConvertDatetimeToSecs
-                0x0000000000004498       0x5c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
-                0x0000000000004498                RTC_HAL_ConvertDatetimeToSecs
+                0x0000000000004490       0x5c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
+                0x0000000000004490                RTC_HAL_ConvertDatetimeToSecs
  .text.RTC_HAL_Enable
-                0x00000000000044f4       0x28 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
-                0x00000000000044f4                RTC_HAL_Enable
+                0x00000000000044ec       0x28 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
+                0x00000000000044ec                RTC_HAL_Enable
  .text.RTC_HAL_Init
-                0x000000000000451c       0x38 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
-                0x000000000000451c                RTC_HAL_Init
+                0x0000000000004514       0x38 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
+                0x0000000000004514                RTC_HAL_Init
  .text.RTC_HAL_SetDatetimeInsecs
-                0x0000000000004554       0x18 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
-                0x0000000000004554                RTC_HAL_SetDatetimeInsecs
+                0x000000000000454c       0x18 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
+                0x000000000000454c                RTC_HAL_SetDatetimeInsecs
  .text.RTC_HAL_GetDatetimeInSecs
-                0x000000000000456c        0x6 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
-                0x000000000000456c                RTC_HAL_GetDatetimeInSecs
- *fill*         0x0000000000004572        0x2 
+                0x0000000000004564        0x6 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
+                0x0000000000004564                RTC_HAL_GetDatetimeInSecs
+ *fill*         0x000000000000456a        0x2 
  .text.RTC_DRV_Init
-                0x0000000000004574       0x58 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
-                0x0000000000004574                RTC_DRV_Init
+                0x000000000000456c       0x58 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
+                0x000000000000456c                RTC_DRV_Init
  .text.RTC_DRV_SetDatetime
-                0x00000000000045cc       0x50 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
-                0x00000000000045cc                RTC_DRV_SetDatetime
+                0x00000000000045c4       0x50 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
+                0x00000000000045c4                RTC_DRV_SetDatetime
  .text.RTC_DRV_GetDatetime
-                0x000000000000461c       0x58 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
-                0x000000000000461c                RTC_DRV_GetDatetime
+                0x0000000000004614       0x58 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
+                0x0000000000004614                RTC_DRV_GetDatetime
  .text.RTC_DRV_SetAlarm
-                0x0000000000004674       0x6c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
-                0x0000000000004674                RTC_DRV_SetAlarm
+                0x000000000000466c       0x6c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
+                0x000000000000466c                RTC_DRV_SetAlarm
  .text.RTC_DRV_SetAlarmIntCmd
-                0x00000000000046e0       0x18 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
-                0x00000000000046e0                RTC_DRV_SetAlarmIntCmd
+                0x00000000000046d8       0x18 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
+                0x00000000000046d8                RTC_DRV_SetAlarmIntCmd
  .text.RTC_DRV_IsAlarmPending
-                0x00000000000046f8       0x1c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
-                0x00000000000046f8                RTC_DRV_IsAlarmPending
+                0x00000000000046f0       0x1c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_driver.c.obj)
+                0x00000000000046f0                RTC_DRV_IsAlarmPending
  .text.CLOCK_HAL_SetOutDiv
-                0x0000000000004714       0x1c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_sim_hal_MKL03Z4.c.obj)
-                0x0000000000004714                CLOCK_HAL_SetOutDiv
+                0x000000000000470c       0x1c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_sim_hal_MKL03Z4.c.obj)
+                0x000000000000470c                CLOCK_HAL_SetOutDiv
  .text.SPI_DRV_IRQHandler
-                0x0000000000004730       0x28 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_shared_function.c.obj)
-                0x0000000000004730                SPI_DRV_IRQHandler
+                0x0000000000004728       0x28 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_shared_function.c.obj)
+                0x0000000000004728                SPI_DRV_IRQHandler
  .text.SPI_DRV_MasterCompleteTransfer
-                0x0000000000004758       0x3c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
+                0x0000000000004750       0x3c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
  .text.SPI_DRV_MasterInit
-                0x0000000000004794       0x84 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
-                0x0000000000004794                SPI_DRV_MasterInit
+                0x000000000000478c       0x84 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
+                0x000000000000478c                SPI_DRV_MasterInit
  .text.SPI_DRV_MasterDeinit
-                0x0000000000004818       0x48 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
-                0x0000000000004818                SPI_DRV_MasterDeinit
+                0x0000000000004810       0x48 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
+                0x0000000000004810                SPI_DRV_MasterDeinit
  .text.SPI_DRV_MasterConfigureBus
-                0x0000000000004860       0x34 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
-                0x0000000000004860                SPI_DRV_MasterConfigureBus
+                0x0000000000004858       0x34 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
+                0x0000000000004858                SPI_DRV_MasterConfigureBus
  .text.SPI_DRV_MasterStartTransfer
-                0x0000000000004894       0x84 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
+                0x000000000000488c       0x84 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
  .text.SPI_DRV_MasterTransferBlocking
-                0x0000000000004918       0x58 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
-                0x0000000000004918                SPI_DRV_MasterTransferBlocking
+                0x0000000000004910       0x58 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
+                0x0000000000004910                SPI_DRV_MasterTransferBlocking
  .text.SPI_DRV_MasterIRQHandler
-                0x0000000000004970       0x84 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
-                0x0000000000004970                SPI_DRV_MasterIRQHandler
+                0x0000000000004968       0x84 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_master_driver.c.obj)
+                0x0000000000004968                SPI_DRV_MasterIRQHandler
  .text.SPI_DRV_SlaveCompleteTransfer
-                0x00000000000049f4       0x4c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_slave_driver.c.obj)
+                0x00000000000049ec       0x4c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_slave_driver.c.obj)
  .text.SPI_DRV_SlaveIRQHandler
-                0x0000000000004a40       0xa0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_slave_driver.c.obj)
-                0x0000000000004a40                SPI_DRV_SlaveIRQHandler
+                0x0000000000004a38       0xa0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_slave_driver.c.obj)
+                0x0000000000004a38                SPI_DRV_SlaveIRQHandler
  .text.SMC_HAL_GetProtectionMode
-                0x0000000000004ae0       0x20 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
-                0x0000000000004ae0                SMC_HAL_GetProtectionMode
+                0x0000000000004ad8       0x20 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
+                0x0000000000004ad8                SMC_HAL_GetProtectionMode
  .text.SMC_HAL_SetRunMode
-                0x0000000000004b00       0x14 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
-                0x0000000000004b00                SMC_HAL_SetRunMode
+                0x0000000000004af8       0x14 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
+                0x0000000000004af8                SMC_HAL_SetRunMode
  .text.SMC_HAL_SetPorMode
-                0x0000000000004b14       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
-                0x0000000000004b14                SMC_HAL_SetPorMode
+                0x0000000000004b0c       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
+                0x0000000000004b0c                SMC_HAL_SetPorMode
  .text.SMC_HAL_SetPstopMode
-                0x0000000000004b24       0x14 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
-                0x0000000000004b24                SMC_HAL_SetPstopMode
+                0x0000000000004b1c       0x14 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
+                0x0000000000004b1c                SMC_HAL_SetPstopMode
  .text.SMC_HAL_SetLpoMode
-                0x0000000000004b38       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
-                0x0000000000004b38                SMC_HAL_SetLpoMode
+                0x0000000000004b30       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
+                0x0000000000004b30                SMC_HAL_SetLpoMode
  .text.SMC_HAL_SetMode
-                0x0000000000004b48       0xf0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
-                0x0000000000004b48                SMC_HAL_SetMode
+                0x0000000000004b40       0xf0 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
+                0x0000000000004b40                SMC_HAL_SetMode
  .text.SMC_HAL_GetStat
-                0x0000000000004c38       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
-                0x0000000000004c38                SMC_HAL_GetStat
+                0x0000000000004c30       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_smc_hal.c.obj)
+                0x0000000000004c30                SMC_HAL_GetStat
  .text.GPIO_HAL_SetPinDir
-                0x0000000000004c48       0x1e ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_hal.c.obj)
-                0x0000000000004c48                GPIO_HAL_SetPinDir
+                0x0000000000004c40       0x1e ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_hal.c.obj)
+                0x0000000000004c40                GPIO_HAL_SetPinDir
  .text.GPIO_HAL_WritePinOutput
-                0x0000000000004c66       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_hal.c.obj)
-                0x0000000000004c66                GPIO_HAL_WritePinOutput
+                0x0000000000004c5e       0x10 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_hal.c.obj)
+                0x0000000000004c5e                GPIO_HAL_WritePinOutput
  .text.I2C_HAL_Init
-                0x0000000000004c76       0x1c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_hal.c.obj)
-                0x0000000000004c76                I2C_HAL_Init
- *fill*         0x0000000000004c92        0x2 
+                0x0000000000004c6e       0x1c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_hal.c.obj)
+                0x0000000000004c6e                I2C_HAL_Init
+ *fill*         0x0000000000004c8a        0x2 
  .text.I2C_HAL_SetBaudRate
-                0x0000000000004c94       0x8c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_hal.c.obj)
-                0x0000000000004c94                I2C_HAL_SetBaudRate
+                0x0000000000004c8c       0x8c ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_hal.c.obj)
+                0x0000000000004c8c                I2C_HAL_SetBaudRate
  .text.I2C_HAL_SendStart
-                0x0000000000004d20       0x24 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_hal.c.obj)
-                0x0000000000004d20                I2C_HAL_SendStart
+                0x0000000000004d18       0x24 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_hal.c.obj)
+                0x0000000000004d18                I2C_HAL_SendStart
  .text.I2C_HAL_SendStop
-                0x0000000000004d44       0x42 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_hal.c.obj)
-                0x0000000000004d44                I2C_HAL_SendStop
+                0x0000000000004d3c       0x42 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_hal.c.obj)
+                0x0000000000004d3c                I2C_HAL_SendStop
  .text.SPI_HAL_Init
-                0x0000000000004d86        0xe ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_hal.c.obj)
-                0x0000000000004d86                SPI_HAL_Init
+                0x0000000000004d7e        0xe ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_hal.c.obj)
+                0x0000000000004d7e                SPI_HAL_Init
  .text.SPI_HAL_SetBaud
-                0x0000000000004d94       0x6e ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_hal.c.obj)
-                0x0000000000004d94                SPI_HAL_SetBaud
+                0x0000000000004d8c       0x6e ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_hal.c.obj)
+                0x0000000000004d8c                SPI_HAL_SetBaud
  .text.SPI_HAL_SetSlaveSelectOutputMode
-                0x0000000000004e02       0x24 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_hal.c.obj)
-                0x0000000000004e02                SPI_HAL_SetSlaveSelectOutputMode
+                0x0000000000004dfa       0x24 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_hal.c.obj)
+                0x0000000000004dfa                SPI_HAL_SetSlaveSelectOutputMode
  .text.SPI_HAL_SetDataFormat
-                0x0000000000004e26       0x26 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_hal.c.obj)
-                0x0000000000004e26                SPI_HAL_SetDataFormat
+                0x0000000000004e1e       0x26 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_hal.c.obj)
+                0x0000000000004e1e                SPI_HAL_SetDataFormat
  .text.SPI_HAL_SetPinMode
-                0x0000000000004e4c       0x1e ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_hal.c.obj)
-                0x0000000000004e4c                SPI_HAL_SetPinMode
+                0x0000000000004e44       0x1e ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_hal.c.obj)
+                0x0000000000004e44                SPI_HAL_SetPinMode
  *(.rodata)
- *fill*         0x0000000000004e6a        0x2 
- .rodata        0x0000000000004e6c        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-impure.o)
-                0x0000000000004e6c                _global_impure_ptr
+ *fill*         0x0000000000004e62        0x2 
+ .rodata        0x0000000000004e64        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc_nano.a(lib_a-impure.o)
+                0x0000000000004e64                _global_impure_ptr
  *(.rodata*)
  .rodata.setTPS82740CommonControlLines.str1.1
-                0x0000000000004e70       0x2d CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
+                0x0000000000004e68       0x2d CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
  .rodata.enableSssupply.str1.1
-                0x0000000000004e9d       0x38 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
+                0x0000000000004e95       0x38 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
  .rodata.printAllSensors.str1.1
-                0x0000000000004ed5       0x90 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
+                0x0000000000004ecd       0x90 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
  .rodata.loopForSensor.str1.1
-                0x0000000000004f65       0xab CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
+                0x0000000000004f5d       0xab CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
  .rodata.repeatRegisterReadForDeviceAndAddress.str1.1
-                0x0000000000005010      0x35d CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
+                0x0000000000005008      0x35d CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
  .rodata.powerupAllSensors.str1.1
-                0x000000000000536d       0x2c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
+                0x0000000000005365       0x2c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
  .rodata.activateAllLowPowerSensorModes.str1.1
-                0x0000000000005399       0x93 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
+                0x0000000000005391       0x93 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
  .rodata.main.str1.1
-                0x000000000000542c     0x112b CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
+                0x0000000000005424     0x114d CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/warp-kl03-ksdk1.1-boot.c.obj
  .rodata._DoInit.str1.1
-                0x0000000000006557       0x14 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
+                0x0000000000006571       0x14 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT.c.obj
  .rodata._aV2C.4388
-                0x000000000000656b       0x10 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_printf.c.obj
+                0x0000000000006585       0x10 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/SEGGER_RTT_printf.c.obj
  .rodata.devSSD1331init.str1.1
-                0x000000000000657b       0x5d CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
+                0x0000000000006595       0x5d CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devSSD1331.c.obj
  .rodata.writeSensorRegisterINA219.str1.1
-                0x00000000000065d8       0x2d CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
+                0x00000000000065f2       0x2d CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
  .rodata.readSensorRegisterINA219.str1.1
-                0x0000000000006605        0x2 CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
+                0x000000000000661f       0x1c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
  .rodata.printSensorDataINA219.str1.1
-                0x0000000000006607       0x4c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
+                0x000000000000663b       0x3c CMakeFiles/Warp.dir/students/hslh2/Warp-firmware/build/ksdk1.1/work/demos/Warp/src/devINA219.c.obj
  .rodata.portGateTable
-                0x0000000000006653        0x2 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
- *fill*         0x0000000000006655        0x3 
+                0x0000000000006677        0x2 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_MKL03Z4.c.obj)
+ *fill*         0x0000000000006679        0x3 
  .rodata.g_i2cBaseAddr
-                0x0000000000006658        0x4 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_common.c.obj)
-                0x0000000000006658                g_i2cBaseAddr
+                0x000000000000667c        0x4 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_common.c.obj)
+                0x000000000000667c                g_i2cBaseAddr
  .rodata.g_i2cIrqId
-                0x000000000000665c        0x1 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_common.c.obj)
-                0x000000000000665c                g_i2cIrqId
- .rodata.LY     0x000000000000665d        0xd ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
+                0x0000000000006680        0x1 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_common.c.obj)
+                0x0000000000006680                g_i2cIrqId
+ .rodata.LY     0x0000000000006681        0xd ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
  .rodata.MONTH_DAYS
-                0x000000000000666a       0x1a ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
- .rodata.ULY    0x0000000000006684        0xd ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
- *fill*         0x0000000000006691        0x3 
+                0x000000000000668e       0x1a ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
+ .rodata.ULY    0x00000000000066a8        0xd ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_hal.c.obj)
+ *fill*         0x00000000000066b5        0x3 
  .rodata.g_rtcBaseAddr
-                0x0000000000006694        0x4 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_common.c.obj)
-                0x0000000000006694                g_rtcBaseAddr
+                0x00000000000066b8        0x4 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_common.c.obj)
+                0x00000000000066b8                g_rtcBaseAddr
  .rodata.g_rtcIrqId
-                0x0000000000006698        0x1 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_common.c.obj)
-                0x0000000000006698                g_rtcIrqId
+                0x00000000000066bc        0x1 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_common.c.obj)
+                0x00000000000066bc                g_rtcIrqId
  .rodata.g_rtcSecondsIrqId
-                0x0000000000006699        0x1 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_common.c.obj)
-                0x0000000000006699                g_rtcSecondsIrqId
- *fill*         0x000000000000669a        0x2 
+                0x00000000000066bd        0x1 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_rtc_common.c.obj)
+                0x00000000000066bd                g_rtcSecondsIrqId
+ *fill*         0x00000000000066be        0x2 
  .rodata.g_spiBaseAddr
-                0x000000000000669c        0x4 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_common.c.obj)
-                0x000000000000669c                g_spiBaseAddr
+                0x00000000000066c0        0x4 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_common.c.obj)
+                0x00000000000066c0                g_spiBaseAddr
  .rodata.g_spiIrqId
-                0x00000000000066a0        0x1 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_common.c.obj)
-                0x00000000000066a0                g_spiIrqId
- *fill*         0x00000000000066a1        0x3 
+                0x00000000000066c4        0x1 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_spi_common.c.obj)
+                0x00000000000066c4                g_spiIrqId
+ *fill*         0x00000000000066c5        0x3 
  .rodata.g_oscBaseAddr
-                0x00000000000066a4        0x4 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_manager_common.c.obj)
-                0x00000000000066a4                g_oscBaseAddr
+                0x00000000000066c8        0x4 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_clock_manager_common.c.obj)
+                0x00000000000066c8                g_oscBaseAddr
  .rodata.g_gpioBaseAddr
-                0x00000000000066a8        0x8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_common.c.obj)
-                0x00000000000066a8                g_gpioBaseAddr
+                0x00000000000066cc        0x8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_common.c.obj)
+                0x00000000000066cc                g_gpioBaseAddr
  .rodata.g_portBaseAddr
-                0x00000000000066b0        0x8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_common.c.obj)
-                0x00000000000066b0                g_portBaseAddr
+                0x00000000000066d4        0x8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_common.c.obj)
+                0x00000000000066d4                g_portBaseAddr
  .rodata.g_portIrqId
-                0x00000000000066b8        0x2 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_common.c.obj)
-                0x00000000000066b8                g_portIrqId
+                0x00000000000066dc        0x2 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_gpio_common.c.obj)
+                0x00000000000066dc                g_portIrqId
  .rodata.kI2CDividerTable
-                0x00000000000066ba       0xc8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_hal.c.obj)
-                0x00000000000066ba                kI2CDividerTable
+                0x00000000000066de       0xc8 ../../../../lib/ksdk_platform_lib/armgcc/KL03Z4/release/libksdk_platform.a(fsl_i2c_hal.c.obj)
+                0x00000000000066de                kI2CDividerTable
  *(.glue_7)
- .glue_7        0x0000000000006782        0x0 linker stubs
+ .glue_7        0x00000000000067a6        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000000006782        0x0 linker stubs
+ .glue_7t       0x00000000000067a6        0x0 linker stubs
  *(.eh_frame)
- *fill*         0x0000000000006782        0x2 
- .eh_frame      0x0000000000006784        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+ *fill*         0x00000000000067a6        0x2 
+ .eh_frame      0x00000000000067a8        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  *(.init)
- .init          0x0000000000006784        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000000006784                _init
- .init          0x0000000000006788        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
+ .init          0x00000000000067a8        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x00000000000067a8                _init
+ .init          0x00000000000067ac        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  *(.fini)
- .fini          0x0000000000006790        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
-                0x0000000000006790                _fini
- .fini          0x0000000000006794        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
-                0x000000000000679c                . = ALIGN (0x4)
+ .fini          0x00000000000067b4        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crti.o
+                0x00000000000067b4                _fini
+ .fini          0x00000000000067b8        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
+                0x00000000000067c0                . = ALIGN (0x4)
 
-.vfp11_veneer   0x000000000000679c        0x0
- .vfp11_veneer  0x000000000000679c        0x0 linker stubs
+.vfp11_veneer   0x00000000000067c0        0x0
+ .vfp11_veneer  0x00000000000067c0        0x0 linker stubs
 
-.v4_bx          0x000000000000679c        0x0
- .v4_bx         0x000000000000679c        0x0 linker stubs
+.v4_bx          0x00000000000067c0        0x0
+ .v4_bx         0x00000000000067c0        0x0 linker stubs
 
-.iplt           0x000000000000679c        0x0
- .iplt          0x000000000000679c        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x00000000000067c0        0x0
+ .iplt          0x00000000000067c0        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x000000000000679c        0x8
-                0x000000000000679c                __exidx_start = .
+.ARM            0x00000000000067c0        0x8
+                0x00000000000067c0                __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x000000000000679c        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .ARM.exidx     0x00000000000067c0        0x8 /usr/lib/gcc/arm-none-eabi/9.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
                                          0x10 (size before relaxing)
-                0x00000000000067a4                __exidx_end = .
+                0x00000000000067c8                __exidx_end = .
 
-.rel.dyn        0x00000000000067a4        0x0
- .rel.iplt      0x00000000000067a4        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x00000000000067c8        0x0
+ .rel.iplt      0x00000000000067c8        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.ctors          0x00000000000067a4        0x0
-                0x00000000000067a4                __CTOR_LIST__ = .
+.ctors          0x00000000000067c8        0x0
+                0x00000000000067c8                __CTOR_LIST__ = .
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
  *(SORT_BY_NAME(.ctors.*))
  *(.ctors)
-                0x00000000000067a4                __CTOR_END__ = .
+                0x00000000000067c8                __CTOR_END__ = .
 
-.dtors          0x00000000000067a4        0x0
-                0x00000000000067a4                __DTOR_LIST__ = .
+.dtors          0x00000000000067c8        0x0
+                0x00000000000067c8                __DTOR_LIST__ = .
  *crtbegin.o(.dtors)
  *crtbegin?.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .dtors)
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
-                0x00000000000067a4                __DTOR_END__ = .
+                0x00000000000067c8                __DTOR_END__ = .
 
-.preinit_array  0x00000000000067a4        0x0
-                0x00000000000067a4                PROVIDE (__preinit_array_start = .)
+.preinit_array  0x00000000000067c8        0x0
+                0x00000000000067c8                PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x00000000000067a4                PROVIDE (__preinit_array_end = .)
+                0x00000000000067c8                PROVIDE (__preinit_array_end = .)
 
-.init_array     0x00000000000067a4        0x4
-                0x00000000000067a4                PROVIDE (__init_array_start = .)
+.init_array     0x00000000000067c8        0x4
+                0x00000000000067c8                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x00000000000067a4        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x00000000000067a8                PROVIDE (__init_array_end = .)
+ .init_array    0x00000000000067c8        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x00000000000067cc                PROVIDE (__init_array_end = .)
 
-.fini_array     0x00000000000067a8        0x4
-                0x00000000000067a8                PROVIDE (__fini_array_start = .)
+.fini_array     0x00000000000067cc        0x4
+                0x00000000000067cc                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x00000000000067a8        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x00000000000067ac                PROVIDE (__fini_array_end = .)
-                0x00000000000067ac                __etext = .
-                0x00000000000067ac                __DATA_ROM = .
+ .fini_array    0x00000000000067cc        0x4 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x00000000000067d0                PROVIDE (__fini_array_end = .)
+                0x00000000000067d0                __etext = .
+                0x00000000000067d0                __DATA_ROM = .
 
 .mtb            0x000000001ffffe00        0x0
                 0x000000001ffffe00                . = ALIGN (0x8)
@@ -1866,7 +1867,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x0000000000000000                __VECTOR_RAM = DEFINED (__ram_vector_table__)?__VECTOR_RAM__:ORIGIN (m_interrupts)
                 0x0000000000000000                __RAM_VECTOR_TABLE_SIZE_BYTES = DEFINED (__ram_vector_table__)?(__interrupts_ram_end__ - __interrupts_ram_start__):0x0
 
-.data           0x000000001ffffe00      0x1a8 load address 0x00000000000067ac
+.data           0x000000001ffffe00      0x1a8 load address 0x00000000000067d0
                 0x000000001ffffe00                . = ALIGN (0x4)
                 0x000000001ffffe00                __DATA_RAM = .
                 0x000000001ffffe00                __data_start__ = .
@@ -1913,19 +1914,19 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
  *(.jcr*)
                 0x000000001fffffa8                . = ALIGN (0x4)
                 0x000000001fffffa8                __data_end__ = .
-                0x0000000000006954                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
+                0x0000000000006978                __DATA_END = (__DATA_ROM + (__data_end__ - __data_start__))
 
 .tm_clone_table
-                0x000000001fffffa8        0x0 load address 0x0000000000006954
+                0x000000001fffffa8        0x0 load address 0x0000000000006978
  .tm_clone_table
                 0x000000001fffffa8        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x000000001fffffa8        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x000000001fffffa8        0x0 load address 0x0000000000006954
+.igot.plt       0x000000001fffffa8        0x0 load address 0x0000000000006978
  .igot.plt      0x000000001fffffa8        0x0 /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.bss            0x000000001fffffa8      0x348 load address 0x0000000000006954
+.bss            0x000000001fffffa8      0x348 load address 0x0000000000006978
                 0x000000001fffffa8                . = ALIGN (0x4)
                 0x000000001fffffa8                __START_BSS = .
                 0x000000001fffffa8                __bss_start__ = .
@@ -2007,7 +2008,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/9.2.1/thumb/v6-m/nofp/crtn.o
                 0x00000000200002f0                . = (. + HEAP_SIZE)
                 0x00000000200002f0                __HeapLimit = .
 
-.stack          0x00000000200002f0      0x100 load address 0x0000000000006c9c
+.stack          0x00000000200002f0      0x100 load address 0x0000000000006cc0
                 0x00000000200002f0                . = ALIGN (0x8)
                 0x00000000200003f0                . = (. + STACK_SIZE)
  *fill*         0x00000000200002f0      0x100 

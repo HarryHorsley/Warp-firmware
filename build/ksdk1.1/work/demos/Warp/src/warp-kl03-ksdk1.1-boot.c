@@ -1998,22 +1998,32 @@ main(void)
                 
             case 'N':
             {
+
+                SEGGER_RTT_WriteString(0, "\r\n\tEnabling I2C pins...\n");
                 enableI2Cpins(menuI2cPullupValue);
                 
-                SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
-                    //Configure device
-                writeSensorRegisterINA219(0x00, 0x399F, menuI2cPullupValue);
+                SEGGER_RTT_WriteString(0, "\r\n\tSet the time delay between each run in milliseconds (e.g., '1234')> ");
+                uint16_t    menuDelayBetweenEachRun = read4digits();
+                SEGGER_RTT_printf(0, "\r\n\tDelay between read batches set to %d milliseconds.\n\n", menuDelayBetweenEachRun);
+                OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+                
+                //write to calibration register
                 writeSensorRegisterINA219(0x05, 0x3FFC, menuI2cPullupValue);
-                    
+                
                 SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
                 
+                SEGGER_RTT_WriteString(0, "INA219 Current sensor data below:");
+            
                 printSensorDataINA219(0);
                 printSensorDataINA219(1); // HEx mode
                 
 //                for (i = 0; i < 1000; i++){
 //                    printSensorDataINA219(0); // NO hex mode flag
 //                }
+                
+                disableI2Cpins();
                 break;
+
             }
             
                 
