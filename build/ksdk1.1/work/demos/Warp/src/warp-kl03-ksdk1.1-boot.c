@@ -2669,7 +2669,7 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
 	OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
         //Configure device
         configureSensorINA219(0x39, 0x9F,/* Payload: Defaults*/
-        0x08, 0x04,/* Calibration standard*/
+        0x3F, 0xFC,/* Calibration standard*/
         i2cPullupValue
         );
         
