@@ -2013,7 +2013,7 @@ main(void)
                 SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
                 
                 SEGGER_RTT_WriteString(0, "INA219 Current sensor data below:");
-                
+            
                 printSensorDataINA219(0);
                 printSensorDataINA219(1); // HEx mode
                 

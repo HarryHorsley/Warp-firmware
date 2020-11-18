@@ -163,7 +163,7 @@ printSensorDataINA219(void)
 
     /* Read each of the measurement registers on the INA219 */
     
-    i2cReadStatus = readSensorRegisterINA219(kWarpSensorOutputRegisterINA219OUT_SHUNT_VOLTAGE, 2 /* numberOfBytes */);
+    i2cReadStatus = readSensorRegisterINA219(0x01, 2 /* numberOfBytes */);
     readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
     readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
     readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 6) | (readSensorRegisterValueLSB >> 2);
@@ -186,7 +186,7 @@ printSensorDataINA219(void)
     }
 
 
-    i2cReadStatus = readSensorRegisterINA219(kWarpSensorOutputRegisterINA219OUT_BUS_VOLTAGE, 2 /* numberOfBytes */);
+    i2cReadStatus = readSensorRegisterINA219(0x02, 2 /* numberOfBytes */);
     readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
     readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
     readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 6) | (readSensorRegisterValueLSB >> 2);
@@ -208,7 +208,7 @@ printSensorDataINA219(void)
     }
 
 
-    i2cReadStatus = readSensorRegisterINA219(kWarpSensorOutputRegisterINA219OUT_POWER, 2 /* numberOfBytes */);
+    i2cReadStatus = readSensorRegisterINA219(0x03, 2 /* numberOfBytes */);
     readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
     readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
     readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 6) | (readSensorRegisterValueLSB >> 2);
@@ -231,7 +231,7 @@ printSensorDataINA219(void)
 
     
 
-    i2cReadStatus = readSensorRegisterINA219(kWarpSensorOutputRegisterINA219OUT_CURRENT, 2 /* numberOfBytes */);
+    i2cReadStatus = readSensorRegisterINA219(0x04, 2 /* numberOfBytes */);
     readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
     readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
     readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 6) | (readSensorRegisterValueLSB >> 2);
