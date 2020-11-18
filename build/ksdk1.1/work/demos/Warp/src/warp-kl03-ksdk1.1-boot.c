@@ -2016,6 +2016,16 @@ main(void)
                     menuTargetSensor, menuRegisterAddress, repetitionsPerAddress, menuI2cPullupValue, spinDelay);
 #endif
 
+                SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
+                OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
+                    //Configure device
+                    configureSensorINA219(0x39, 0x9F,/* Payload: Defaults*/
+                    0x3F, 0xFC,/* Calibration standard*/
+                    menuI2cPullupValue
+                    );
+                    
+                    SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
+                
                 repeatRegisterReadForDeviceAndAddress(    menuTargetSensor /*warpSensorDevice*/,
                                     menuRegisterAddress /*baseAddress */,
                                     menuI2cPullupValue,
