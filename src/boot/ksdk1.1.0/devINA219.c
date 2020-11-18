@@ -35,9 +35,9 @@ initINA219(const uint8_t i2cAddress, WarpI2CDeviceState volatile *  deviceStateP
 }
 
 WarpStatus
-writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payload2, uint16_t menuI2cPullupValue)
+writeSensorRegisterINA219(uint8_t deviceRegister, uint16_t payload, uint16_t menuI2cPullupValue)
 {
-    uint8_t        payloadBytes[2], commandByte[1];
+    uint16_t        payloadBytes[1], commandByte[1];
     i2c_status_t    status;
 
     i2c_device_t slave =
@@ -47,8 +47,7 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payl
     };
 
     commandByte[0] = deviceRegister;
-    payloadBytes[0] = payload1;
-    payloadBytes[1] = payload2;
+    payloadBytes[0] = payload;
     
     
     status = I2C_DRV_MasterSendDataBlocking(
@@ -69,16 +68,16 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payl
 }
 
 WarpStatus
-configureSensorINA219(uint8_t payload_SETUP1, uint8_t payload_SETUP2, uint8_t payload_CALIB1, uint8_t payload_CALIB2, uint16_t menuI2cPullupValue)
+configureSensorINA219(uint16_t payload_SETUP, uint16_t payload_CALIB, uint16_t menuI2cPullupValue)
 {
     WarpStatus    i2cWriteStatus1, i2cWriteStatus2;
 
     i2cWriteStatus1 = writeSensorRegisterINA219(kWarpSensorConfigurationRegisterINA219Config,
-                            payload_SETUP1, payload_SETUP2 /* payload: Disable FIFO */,
+                            payload_SETUP /* payload: Disable FIFO */,
                             menuI2cPullupValue);
     
     i2cWriteStatus2 = writeSensorRegisterINA219(kWarpSensorConfigurationRegisterINA219Calibration,
-                            payload_CALIB1, payload_CALIB2 /* payload: Disable FIFO */,
+                            payload_CALIB /* payload: Disable FIFO */,
                             menuI2cPullupValue);
 
     return (i2cWriteStatus1 | i2cWriteStatus2);
