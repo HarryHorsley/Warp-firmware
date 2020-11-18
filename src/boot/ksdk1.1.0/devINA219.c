@@ -46,8 +46,8 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payl
     };
 
     commandByte[0] = deviceRegister;
-    payloadBytes[0] = payload1;
-    payloadBytes[1] = payload2;
+    payloadBytes[0] = payload2;
+    payloadBytes[1] = payload1;
   
     
     
@@ -105,7 +105,7 @@ readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
                             cmdBuf,
                             1,
                             (uint8_t *)deviceINA219State.i2cBuffer,
-                            numberOfBytes,
+                            2,
                             gWarpI2cTimeoutMilliseconds);
 
     if (status != kStatus_I2C_Success)
