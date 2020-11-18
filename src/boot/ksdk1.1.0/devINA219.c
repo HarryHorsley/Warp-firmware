@@ -30,7 +30,6 @@ void
 initINA219(const uint8_t i2cAddress, WarpI2CDeviceState volatile *  deviceStatePointer)
 {
     deviceStatePointer->i2cAddress    = i2cAddress;
-    deviceStatePointer->signalType    = (kWarpTypeMaskCurrent);
     return;
 }
 
@@ -63,7 +62,7 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payl
     
     if (status != kStatus_I2C_Success)
     {
-        SEGGER_RTT_printf(0, "You CANNOT write to this device!");
+        SEGGER_RTT_printf(0, "\nYou CANNOT write to this device!\n");
         return kWarpStatusDeviceCommunicationFailed;
     }
 
@@ -75,11 +74,11 @@ configureSensorINA219(uint8_t payload_SETUP1, uint8_t payload_SETUP2, uint8_t pa
 {
     WarpStatus    i2cWriteStatus1, i2cWriteStatus2;
 
-    i2cWriteStatus1 = writeSensorRegisterINA219(kWarpSensorConfigurationRegisterINA219Config,
+    i2cWriteStatus1 = writeSensorRegisterINA219(0x00,
                             payload_SETUP1, payload_SETUP2 /* payload: Disable FIFO */,
                             menuI2cPullupValue);
     
-    i2cWriteStatus2 = writeSensorRegisterINA219(kWarpSensorConfigurationRegisterINA219Calibration,
+    i2cWriteStatus2 = writeSensorRegisterINA219(0x05,
                             payload_CALIB1, payload_CALIB2 /* payload: Disable FIFO */,
                             menuI2cPullupValue);
 
