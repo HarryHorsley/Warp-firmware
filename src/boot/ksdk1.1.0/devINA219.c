@@ -87,7 +87,7 @@ configureSensorINA219(uint8_t payload_SETUP1, uint8_t payload_SETUP2, uint8_t pa
 WarpStatus
 readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
 {
-    uint8_t        cmdBuf;
+    uint8_t        cmdBuf[1];
     i2c_status_t    status;
 
     i2c_device_t slave =
@@ -96,7 +96,7 @@ readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
         .baudRate_kbps = gWarpI2cBaudRateKbps
     };
 
-    cmdBuf = deviceRegister;
+    cmdBuf[0] = deviceRegister;
 
     status = I2C_DRV_MasterReceiveDataBlocking(
                             0 /* I2C peripheral instance */,
