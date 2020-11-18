@@ -2013,6 +2013,7 @@ main(void)
 //                for (i = 0; i < 1000; i++){
 //                    printSensorDataINA219(0); // NO hex mode flag
 //                }
+                break;
             }
             
                 
@@ -2732,11 +2733,6 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
 	SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
 	OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
         //Configure device
-        configureSensorINA219(0x39, 0x9F,/* Payload: Defaults*/
-        0x3F, 0xFC,/* Calibration standard*/
-        i2cPullupValue
-        );
-        
         SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
 	#endif
 //        #ifdef WARP_BUILD_ENABLE_DEVMAG3110
