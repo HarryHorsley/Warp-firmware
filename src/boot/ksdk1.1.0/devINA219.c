@@ -79,21 +79,21 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint16_t payload, uint16_t men
     return kWarpStatusOK;
 }
 
-WarpStatus
-configureSensorINA219(uint8_t payload_SETUP1, uint8_t payload_SETUP2, uint8_t payload_CALIB1, uint8_t payload_CALIB2, uint16_t menuI2cPullupValue)
-{
-    WarpStatus    i2cWriteStatus1, i2cWriteStatus2;
-
-    i2cWriteStatus1 = writeSensorRegisterINA219(0x00,
-                            payload_SETUP1, payload_SETUP2 /* payload: Disable FIFO */,
-                            menuI2cPullupValue);
-    
-    i2cWriteStatus2 = writeSensorRegisterINA219(0x05,
-                            payload_CALIB1, payload_CALIB2 /* payload: Disable FIFO */,
-                            menuI2cPullupValue);
-
-    return (i2cWriteStatus1 | i2cWriteStatus2);
-}
+//WarpStatus
+//configureSensorINA219(uint8_t payload_SETUP1, uint8_t payload_SETUP2, uint8_t payload_CALIB1, uint8_t payload_CALIB2, uint16_t menuI2cPullupValue)
+//{
+//    WarpStatus    i2cWriteStatus1, i2cWriteStatus2;
+//
+//    i2cWriteStatus1 = writeSensorRegisterINA219(0x00,
+//                            payload_SETUP1, payload_SETUP2 /* payload: Disable FIFO */,
+//                            menuI2cPullupValue);
+//    
+//    i2cWriteStatus2 = writeSensorRegisterINA219(0x05,
+//                            payload_CALIB1, payload_CALIB2 /* payload: Disable FIFO */,
+//                            menuI2cPullupValue);
+//
+//    return (i2cWriteStatus1 | i2cWriteStatus2);
+//}
 
 WarpStatus
 readSensorRegisterINA219(uint8_t deviceRegister, int numberOfBytes)
