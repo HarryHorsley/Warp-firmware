@@ -2563,14 +2563,14 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
                     i2cPullupValue
                     );
     #endif
-//    
+//
 //#ifdef WARP_BUILD_ENABLE_DEVINA219
 //    //Configure device
 //    numberOfConfigErrors += configureSensorINA219(0x399F,/* Payload: Defaults*/
 //    0x0000,/* Calibration standard*/
 //    i2cPullupValue
 //    );
-//    
+//
 //    SEGGER_RTT_WriteString(0, "Completed configuration for current sensor");
 //#endif
     
@@ -2668,8 +2668,8 @@ printAllSensors(bool printHeadersAndCalibration, bool hexModeFlag, int menuDelay
 	SEGGER_RTT_WriteString(0, "INA219 Current sensor data below");
 	OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
         //Configure device
-        configureSensorINA219(0x399F,/* Payload: Defaults*/
-        0x0804,/* Calibration standard*/
+        configureSensorINA219(0x39, 0x9F,/* Payload: Defaults*/
+        0x08, 0x04,/* Calibration standard*/
         i2cPullupValue
         );
         
