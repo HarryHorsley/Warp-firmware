@@ -37,7 +37,7 @@ initINA219(const uint8_t i2cAddress, WarpI2CDeviceState volatile *  deviceStateP
 WarpStatus
 writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payload2, uint16_t menuI2cPullupValue)
 {
-    uint8_t        payloadBytes[2], commandByte[1];
+    uint16_t        payloadBytes[2], commandByte[1];
     i2c_status_t    status;
 
     i2c_device_t slave =
@@ -49,6 +49,7 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payl
     commandByte[0] = deviceRegister;
     payloadBytes[0] = payload1;
     payloadBytes[1] = payload2;
+  
     
     
     status = I2C_DRV_MasterSendDataBlocking(
@@ -59,6 +60,7 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint8_t payload1, uint8_t payl
                             payloadBytes,
                             2,
                             gWarpI2cTimeoutMilliseconds);
+    
     if (status != kStatus_I2C_Success)
     {
         SEGGER_RTT_printf(0, "You CANNOT write to this device!");
@@ -122,7 +124,7 @@ printSensorDataINA219(bool hexModeFlag)
 {
     uint16_t    readSensorRegisterValueLSB;
     uint16_t    readSensorRegisterValueMSB;
-    int16_t        readSensorRegisterValueCombined;
+    uint16_t     readSensorRegisterValueCombined;
     WarpStatus    i2cReadStatus;
 
 
@@ -139,7 +141,8 @@ printSensorDataINA219(bool hexModeFlag)
      *    We could also improve things by doing a 6-byte read transaction.
      */
     i2cReadStatus = readSensorRegisterINA219(kWarpSensorOutputRegisterINA219Current, 2 /* numberOfBytes */);
-    readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0]; // Maybe get rid of the [0] here I don''t know
+    readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
+    
     readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
     
     readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 6) | (readSensorRegisterValueLSB >> 2);
