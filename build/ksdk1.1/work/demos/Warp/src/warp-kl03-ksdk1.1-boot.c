@@ -2007,8 +2007,11 @@ main(void)
                 SEGGER_RTT_printf(0, "\r\n\tDelay between read batches set to %d milliseconds.\n\n", menuDelayBetweenEachRun);
                 OSA_TimeDelay(gWarpMenuPrintDelayMilliseconds);
                 
+                //write to config register
+                writeSensorRegisterINA219(0x00, 0x019F, menuI2cPullupValue);
+                
                 //write to calibration register
-                writeSensorRegisterINA219(0x05, 0x3FFC, menuI2cPullupValue);
+                writeSensorRegisterINA219(0x05, 0x2000, menuI2cPullupValue);
                 
                 SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
                 
