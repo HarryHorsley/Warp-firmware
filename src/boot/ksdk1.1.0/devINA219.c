@@ -81,7 +81,6 @@ writeSensorRegisterINA219(uint8_t deviceRegister, uint16_t payload, uint16_t men
         SEGGER_RTT_WriteString(0, "\nDidnt write succesfully.");
         return kWarpStatusDeviceCommunicationFailed;
     }
-    SEGGER_RTT_WriteString(0, "\nWrite succesfull.");
     return kWarpStatusOK;
 }
 
@@ -167,7 +166,7 @@ printSensorDataINA219(void)
     
     uint16_t CurrentValue = readSensorRegisterValueCombined / 20;
 
-    SEGGER_RTT_WriteString(0, "\nCurrent:");
+    //SEGGER_RTT_WriteString(0, "\nCurrent:");
 
     if (i2cReadStatus != kWarpStatusOK)
     {
