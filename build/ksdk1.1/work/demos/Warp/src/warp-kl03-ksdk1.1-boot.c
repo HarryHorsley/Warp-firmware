@@ -2015,14 +2015,11 @@ main(void)
                 
                 SEGGER_RTT_WriteString(0, "\nCompleted configuration for current sensor.\n");
                 
-                SEGGER_RTT_WriteString(0, "INA219 Current sensor data below:");
+                SEGGER_RTT_WriteString(0, "INA219 Current sensor data below:\n");
             
-                printSensorDataINA219(0);
-                printSensorDataINA219(1); // HEx mode
-                
-//                for (i = 0; i < 1000; i++){
-//                    printSensorDataINA219(0); // NO hex mode flag
-//                }
+                for (int i = 0; i < 1000; i++){
+                    printSensorDataINA219(); // NO hex mode flag, taken out
+                }
                 
                 disableI2Cpins();
                 break;
