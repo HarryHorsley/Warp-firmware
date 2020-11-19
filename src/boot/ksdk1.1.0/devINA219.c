@@ -163,7 +163,7 @@ printSensorDataINA219(void)
     i2cReadStatus = readSensorRegisterINA219(0x04, 2 /* numberOfBytes */);
     readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
     readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
-    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 8 | (readSensorRegisterValueLSB);
+    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 8 | (readSensorRegisterValueLSB));
     
     uint16_t CurrentValue = readSensorRegisterValueCombined / 20;
 
