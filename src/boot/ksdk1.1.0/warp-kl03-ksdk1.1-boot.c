@@ -2017,7 +2017,7 @@ main(void)
                 
                 SEGGER_RTT_WriteString(0, "INA219 Current sensor data below:\n");
             
-                for (i = 0; i < 1000; i++){
+                for (int i = 0; i < 1000; i++){
                     printSensorDataINA219(); // NO hex mode flag, taken out
                 }
                 
