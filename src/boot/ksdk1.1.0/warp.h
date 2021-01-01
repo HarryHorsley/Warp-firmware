@@ -33,21 +33,13 @@ typedef enum
     kWarpTypeMaskLambda570Y        = (1 << 19),
     kWarpTypeMaskLambda600O        = (1 << 20),
     kWarpTypeMaskLambda650R        = (1 << 21),
-
-    kWarpTypeMaskLambda610R        = (1 << 22),
-    kWarpTypeMaskLambda680S        = (1 << 23),
-    kWarpTypeMaskLambda730T        = (1 << 24),
-    kWarpTypeMaskLambda760U        = (1 << 25),
-    kWarpTypeMaskLambda810V        = (1 << 26),
-    kWarpTypeMaskLambda860W        = (1 << 27),
-
-    kWarpTypeMaskTotalVOC        = (1 << 28),
-    kWarpTypeMaskEquivalentCO2    = (1 << 29),
     
-    kWarpTypeMaskShunt             = (1 << 30),
-    kWarpTypeMaskBusVoltage     = (1 << 31),
-    kWarpTypeMaskPower          = (1 << 32),
-    kWarpTypeMaskCurrent        = (1 << 33),
+    kWarpTypeMaskShunt             = (1 << 22),
+    kWarpTypeMaskBusVoltage     = (1 << 23),
+    kWarpTypeMaskPower          = (1 << 24),
+    kWarpTypeMaskCurrent        = (1 << 25),
+    
+    kWarpTypeMaskALSOut         = (1 << 26),
 
 
     /*
@@ -143,6 +135,7 @@ typedef enum
     kWarpSensorADXL362,
     kWarpSensorMMA8451Q,
     kWarpSensorINA219,
+    kWarpSensorVEML7700,
     kWarpSensorBME680,
     kWarpSensorBMX055accel,
     kWarpSensorBMX055gyro,
@@ -193,45 +186,11 @@ typedef enum
     kWarpSensorConfigurationRegisterINA219Config            = 0x00,
     kWarpSensorConfigurationRegisterINA219Calibration       = 0x05,
 
-    kWarpSensorConfigurationRegisterMAG3110CTRL_REG1        = 0x10,
-    kWarpSensorConfigurationRegisterMAG3110CTRL_REG2        = 0x11,
-
-    kWarpSensorConfigurationRegisterHDC1000Configuration        = 0x02,
-
-    kWarpSensorConfigurationRegisterAMG8834PCTL            = 0x00,
-    kWarpSensorConfigurationRegisterAMG8834RST            = 0x01,
-    kWarpSensorConfigurationRegisterAMG8834FPSC            = 0x02,
-
-    kWarpSensorConfigurationRegisterCCS811MEAS_MODE            = 0x01,
-    kWarpSensorConfigurationRegisterCCS811APP_START            = 0xF4,
-
-    kWarpSensorConfigurationRegisterBMX055accelPMU_RANGE        = 0x0F,
-    kWarpSensorConfigurationRegisterBMX055accelPMU_BW        = 0x10,
-    kWarpSensorConfigurationRegisterBMX055accelPMU_LPW        = 0x11,
-    kWarpSensorConfigurationRegisterBMX055accelPMU_LOW_POWER    = 0x12,
-    kWarpSensorConfigurationRegisterBMX055accelACCD_HBW        = 0x13,
-    kWarpSensorConfigurationRegisterBMX055magPowerCtrl        = 0x4B,
-    kWarpSensorConfigurationRegisterBMX055magOpMode            = 0x4C,
-    kWarpSensorConfigurationRegisterBMX055gyroRANGE            = 0x0F,
-    kWarpSensorConfigurationRegisterBMX055gyroBW            = 0x10,
-    kWarpSensorConfigurationRegisterBMX055gyroLPM1            = 0x11,
-    kWarpSensorConfigurationRegisterBMX055gyroRATE_HBW        = 0x13,
-
-    kWarpSensorConfigurationRegisterL3GD20HCTRL1            = 0x20,
-    kWarpSensorConfigurationRegisterL3GD20HCTRL2            = 0x21,
-    kWarpSensorConfigurationRegisterL3GD20HCTRL5            = 0x24,
-
-    kWarpSensorConfigurationRegisterBME680Reset            = 0xE0,
-    kWarpSensorConfigurationRegisterBME680Config            = 0x75,
-    kWarpSensorConfigurationRegisterBME680Ctrl_Meas            = 0x74,
-    kWarpSensorConfigurationRegisterBME680Ctrl_Hum            = 0x72,
-    kWarpSensorConfigurationRegisterBME680Ctrl_Gas_1        = 0x71,
-    kWarpSensorConfigurationRegisterBME680Ctrl_Gas_0        = 0x70,
-
-    kWarpSensorConfigurationRegisterBME680CalibrationRegion1Start    = 0x89,
-    kWarpSensorConfigurationRegisterBME680CalibrationRegion1End    = 0xA2,
-    kWarpSensorConfigurationRegisterBME680CalibrationRegion2Start    = 0xE1,
-    kWarpSensorConfigurationRegisterBME680CalibrationRegion2End    = 0xF2,
+    kWarpSensorConfigurationRegisterVEML7700Config          = 0x00,
+    kWarpSensorConfigurationRegisterVEML7700HighThresh      = 0x01,
+    kWarpSensorConfigurationRegisterVEML7700LowThresh       = 0x02,
+    kWarpSensorConfigurationRegisterVEML7700PSM             = 0x03,
+    
 } WarpSensorConfigurationRegister;
 
 typedef enum
@@ -248,64 +207,10 @@ typedef enum
     kWarpSensorOutputRegisterINA219Power                = 0x03,
     kWarpSensorOutputRegisterINA219Current              = 0x04,
 
-    kWarpSensorOutputRegisterMAG3110OUT_X_MSB            = 0x01,
-    kWarpSensorOutputRegisterMAG3110OUT_X_LSB            = 0x02,
-    kWarpSensorOutputRegisterMAG3110OUT_Y_MSB            = 0x03,
-    kWarpSensorOutputRegisterMAG3110OUT_Y_LSB            = 0x04,
-    kWarpSensorOutputRegisterMAG3110OUT_Z_MSB            = 0x05,
-    kWarpSensorOutputRegisterMAG3110OUT_Z_LSB            = 0x06,
-    kWarpSensorOutputRegisterMAG3110DIE_TEMP            = 0x0F,
-
-    kWarpSensorOutputRegisterHDC1000Temperature            = 0x00,
-    kWarpSensorOutputRegisterHDC1000Humidity            = 0x01,
-
-    kWarpSensorOutputRegisterAMG8834TTHL                = 0x0E,
-    kWarpSensorOutputRegisterAMG8834TTHH                = 0x0F,
-    kWarpSensorOutputRegisterAMG8834T01L                = 0x80,
-    kWarpSensorOutputRegisterAMG8834T64H                = 0xFF,
-
-    kWarpSensorOutputRegisterCCS811ALG_DATA                = 0x02,
-    kWarpSensorOutputRegisterCCS811RAW_DATA                = 0x03,
-    kWarpSensorOutputRegisterCCS811RAW_REF_NTC            = 0x06,
-
-    kWarpSensorOutputRegisterBMX055accelACCD_X_LSB            = 0x02,
-    kWarpSensorOutputRegisterBMX055accelACCD_X_MSB            = 0x03,
-    kWarpSensorOutputRegisterBMX055accelACCD_Y_LSB            = 0x04,
-    kWarpSensorOutputRegisterBMX055accelACCD_Y_MSB            = 0x05,
-    kWarpSensorOutputRegisterBMX055accelACCD_Z_LSB            = 0x06,
-    kWarpSensorOutputRegisterBMX055accelACCD_Z_MSB            = 0x07,
-    kWarpSensorOutputRegisterBMX055accelACCD_TEMP            = 0x08,
-    kWarpSensorOutputRegisterBMX055gyroRATE_X_LSB            = 0x02,
-    kWarpSensorOutputRegisterBMX055gyroRATE_X_MSB            = 0x03,
-    kWarpSensorOutputRegisterBMX055gyroRATE_Y_LSB            = 0x04,
-    kWarpSensorOutputRegisterBMX055gyroRATE_Y_MSB            = 0x05,
-    kWarpSensorOutputRegisterBMX055gyroRATE_Z_LSB            = 0x06,
-    kWarpSensorOutputRegisterBMX055gyroRATE_Z_MSB            = 0x07,
-    kWarpSensorOutputRegisterBMX055magX_LSB                = 0x42,
-    kWarpSensorOutputRegisterBMX055magX_MSB                = 0x43,
-    kWarpSensorOutputRegisterBMX055magY_LSB                = 0x44,
-    kWarpSensorOutputRegisterBMX055magY_MSB                = 0x45,
-    kWarpSensorOutputRegisterBMX055magZ_LSB                = 0x46,
-    kWarpSensorOutputRegisterBMX055magZ_MSB                = 0x47,
-    kWarpSensorOutputRegisterBMX055magRHALL_LSB            = 0x48,
-    kWarpSensorOutputRegisterBMX055magRHALL_MSB            = 0x49,
-
-    kWarpSensorOutputRegisterL3GD20HOUT_TEMP            = 0x26,
-    kWarpSensorOutputRegisterL3GD20HOUT_X_L                = 0x28,
-    kWarpSensorOutputRegisterL3GD20HOUT_X_H                = 0x29,
-    kWarpSensorOutputRegisterL3GD20HOUT_Y_L                = 0x2A,
-    kWarpSensorOutputRegisterL3GD20HOUT_Y_H                = 0x2B,
-    kWarpSensorOutputRegisterL3GD20HOUT_Z_L                = 0x2C,
-    kWarpSensorOutputRegisterL3GD20HOUT_Z_H                = 0x2D,
-
-    kWarpSensorOutputRegisterBME680press_msb            = 0x1F,
-    kWarpSensorOutputRegisterBME680press_lsb            = 0x20,
-    kWarpSensorOutputRegisterBME680press_xlsb            = 0x21,
-    kWarpSensorOutputRegisterBME680temp_msb                = 0x22,
-    kWarpSensorOutputRegisterBME680temp_lsb                = 0x23,
-    kWarpSensorOutputRegisterBME680temp_xlsb            = 0x24,
-    kWarpSensorOutputRegisterBME680hum_msb                = 0x25,
-    kWarpSensorOutputRegisterBME680hum_lsb                = 0x26,
+    kWarpSensorOutputRegisterVEML7700ALSOut             = 0x04,
+    kWarpSensorOutputRegisterVEML7700WhiteOut           = 0x05,
+    kWarpSensorOutputRegisterVEML7700ALSTrigger         = 0x06,
+    
 } WarpSensorOutputRegister;
 
 typedef struct

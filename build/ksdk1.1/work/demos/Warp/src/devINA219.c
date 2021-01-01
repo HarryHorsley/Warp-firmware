@@ -158,15 +158,42 @@ printSensorDataINA219(void)
     uint16_t    readSensorRegisterValueMSB;
     int16_t        readSensorRegisterValueCombined;
     WarpStatus    i2cReadStatus;
+    uint16_t CurrentValue;
 
-    i2cReadStatus = readSensorRegisterINA219(0x04, 2 /* numberOfBytes */);
+
+//    /* Read each of the measurement registers on the INA219 */
+//
+//    i2cReadStatus = readSensorRegisterINA219(kWarpSensorOutputRegisterINA219ShuntVoltage, 2 /* numberOfBytes */);
+//    readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
+//    readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
+//    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 8) | (readSensorRegisterValueLSB);
+//
+//    /*
+//     *    Sign extend the 14-bit value based on knowledge that upper 2 bit are 0:
+//     */
+//    CurrentValue = readSensorRegisterValueCombined / 20;
+//
+//    SEGGER_RTT_WriteString(0, "\nShunt Voltage:");
+//
+//    if (i2cReadStatus != kWarpStatusOK)
+//    {
+//        SEGGER_RTT_WriteString(0, " ----,");
+//    }
+//    else
+//    {
+//        SEGGER_RTT_printf(0, " %d,", CurrentValue);
+//
+//    }
+//
+
+    i2cReadStatus = readSensorRegisterINA219(kWarpSensorOutputRegisterINA219BusVoltage, 2 /* numberOfBytes */);
     readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
     readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
-    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 8 | (readSensorRegisterValueLSB));
-    
-    uint16_t CurrentValue = readSensorRegisterValueCombined / 20;
+    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 8) | (readSensorRegisterValueLSB);
 
-    //SEGGER_RTT_WriteString(0, "\nCurrent:");
+    CurrentValue = readSensorRegisterValueCombined;
+
+//    SEGGER_RTT_WriteString(0, "\nBus Voltage:");
 
     if (i2cReadStatus != kWarpStatusOK)
     {
@@ -176,4 +203,46 @@ printSensorDataINA219(void)
     {
         SEGGER_RTT_printf(0, " %d,", CurrentValue);
     }
+
+
+//    i2cReadStatus = readSensorRegisterINA219(kWarpSensorOutputRegisterINA219Power, 2 /* numberOfBytes */);
+//    readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
+//    readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
+//    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 8) | (readSensorRegisterValueLSB);
+//
+//   CurrentValue = readSensorRegisterValueCombined;
+//
+////    SEGGER_RTT_WriteString(0, "\nPower:");
+//
+//    if (i2cReadStatus != kWarpStatusOK)
+//    {
+//        SEGGER_RTT_WriteString(0, " ----,");
+//    }
+//    else
+//    {
+//            SEGGER_RTT_printf(0, " %d,", CurrentValue);
+//    }
+
+
+//
+//    i2cReadStatus = readSensorRegisterINA219(kWarpSensorOutputRegisterINA219Current, 2 /* numberOfBytes */);
+//    readSensorRegisterValueMSB = deviceINA219State.i2cBuffer[0];
+//    readSensorRegisterValueLSB = deviceINA219State.i2cBuffer[1];
+//    readSensorRegisterValueCombined = ((readSensorRegisterValueMSB & 0xFF) << 8) | (readSensorRegisterValueLSB);
+//
+//    /*
+//     *    Sign extend the 14-bit value based on knowledge that upper 2 bit are 0:
+//     */
+//CurrentValue = readSensorRegisterValueCombined;
+////
+////    SEGGER_RTT_WriteString(0, "\nCurrent:");
+//
+//    if (i2cReadStatus != kWarpStatusOK)
+//    {
+//        SEGGER_RTT_WriteString(0, " ----,");
+//    }
+//    else
+//    {
+//        SEGGER_RTT_printf(0, " %d,", CurrentValue);
+//    }
 }

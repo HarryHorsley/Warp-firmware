@@ -96,19 +96,20 @@ gpio_output_pin_user_config_t	outputPins[] = {
 		.config.driveStrength = kPortLowDriveStrength,
 	},
 	{
-		.pinName = kWarpPinISL23415_nCS, 			/*	Was kWarpPinTPS82675_MODE in Warp v2			*/
-		.config.outputLogic = 1,
-		.config.slewRate = kPortSlowSlewRate,
-		.config.driveStrength = kPortLowDriveStrength,
-	},
-	{
 		.pinName = kWarpPinCLKOUT32K,
 		.config.outputLogic = 1,
 		.config.slewRate = kPortSlowSlewRate,
 		.config.driveStrength = kPortLowDriveStrength,
 	},
 #endif
-	{
+    {
+        .pinName = PWM_pin,             /*    Was kWarpPinTPS82675_MODE in Warp v2            */
+        .config.outputLogic = 1,
+        .config.slewRate = kPortSlowSlewRate,
+        .config.driveStrength = kPortLowDriveStrength,
+    },
+    
+    {
 		.pinName = kWarpPinADXL362_CS,				/*	Was kWarpPinADXL362_CS_PAN1326_nSHUTD in Warp v2	*/
 		.config.outputLogic = 1,
 		.config.slewRate = kPortSlowSlewRate,
