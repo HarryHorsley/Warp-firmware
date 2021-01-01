@@ -1,7 +1,9 @@
 README
 
 Name: Harry Horsley
+
 College: Jesus 
+
 CRSid: hslh2
 
 The projects focuses on optimizing the light incident upon the surface of a solar panel by rotating the panel through 1-axis of freedom. This achieved with two light sensors and a motor.
